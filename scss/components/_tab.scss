@@ -35,6 +35,12 @@
 		color: $primary-color;
 		box-shadow: 0 -22px 50px 0 rgba(0,0,0,0.06);
 	}
+
+	@include breakpoint(767, max) {
+		> li > a {
+			font-size: 14px;
+		}
+	}
 }
 .et-tab-content {
 	border-radius: $border-radius-big;

@@ -1,23 +1,28 @@
 .et-form {
-	.et-place-group, .et-time-group {
-		.form-group:nth-child(2) {
-			margin-bottom: 0;
+	@include breakpoint(768, min) {
+		.et-place-group, .et-time-group {
+			.form-group:nth-child(2) {
+				margin-bottom: 0;
+			}
+		}
+		.et-place-group {
+			padding-right: 15px;
+		}
+		.et-time-group {
+			padding-left: 15px;
+		}
+		.et-button-group {
+			margin-top: 25px;
 		}
 	}
-	.et-place-group {
-		padding-right: 15px;
+	@include breakpoint(767, max) {
+		.form-group {
+			margin-bottom: 15px;
+		}
 	}
-	.et-time-group {
-		padding-left: 15px;
-	}
-	.et-client-group {
+	.et-client-group, .et-button-group {
 		display: flex;
 		justify-content: space-between;
-	}
-	.et-button-group {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 25px;
 	}
 }
 
@@ -33,26 +38,35 @@
 			&::before {
 				content: '';
 				position: absolute;
-				width: 25px;
+				left: 3px;
+				width: 12px;
+				@include breakpoint(768, min) {
+					width: 25px;
+					left: -50%;
+				}
 				height: 40px;
 				border: none;
 				border-top: solid 1px $border-color;
 				border-right: solid 1px $border-color;
 				border-top-right-radius: $border-radius-normal;
 				top: -40px;
-				left: -50%;
+				
 			}
 			&::after {
 				content: '';
 				position: absolute;
-				width: 25px;
+				left: 3px;
+				width: 12px;
+				@include breakpoint(768, min) {
+					width: 25px;
+					left: -50%;
+				}
 				height: 40px;
 				border: none;
 				border-bottom: solid 1px $border-color;
 				border-right: solid 1px $border-color;
 				border-bottom-right-radius: $border-radius-normal;
 				bottom: -40px;
-				left: -50%;
 			}
 		}
 	}
