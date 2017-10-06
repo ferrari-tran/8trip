@@ -1,0 +1,73 @@
+.et-form {
+	.et-place-group, .et-time-group {
+		.form-group:nth-child(2) {
+			margin-bottom: 0;
+		}
+	}
+	.et-place-group {
+		padding-right: 15px;
+	}
+	.et-time-group {
+		padding-left: 15px;
+	}
+	.et-client-group {
+		display: flex;
+		justify-content: space-between;
+	}
+	.et-button-group {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
+	}
+}
+
+.et-reverse-group {
+	position: relative;
+	.et-reverse-control {
+		position: absolute;
+		top: calc(50% + 12px);
+		right: -20px;
+		transform: translateY(-50%);
+		.btn-reverse-control {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 40px;
+				border: none;
+				border-top: solid 1px $border-color;
+				border-right: solid 1px $border-color;
+				border-top-right-radius: $border-radius-normal;
+				top: -40px;
+				left: -50%;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				width: 25px;
+				height: 40px;
+				border: none;
+				border-bottom: solid 1px $border-color;
+				border-right: solid 1px $border-color;
+				border-bottom-right-radius: $border-radius-normal;
+				bottom: -40px;
+				left: -50%;
+			}
+		}
+	}
+}
+
+.btn-reverse-control {
+	width: 24px;
+	height: 24px;
+	background-color: $white;
+	border: none;
+	border-radius: 50%;
+	background-image: url('../images/ic_rotate.svg');
+	background-size: auto 12px;
+	background-repeat: no-repeat;
+	background-position: center;
+	outline: none;
+	@extend .et-shadow-100;
+}

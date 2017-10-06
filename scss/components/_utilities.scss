@@ -1,0 +1,90 @@
+.transition {
+	transition: all 0.27s ease-in-out;
+}
+
+/**
+ * Sizing
+ */
+.et-normal-padding {
+	padding: $normal-padding;
+}
+.et-normal-padding-x {
+	padding-left: $normal-padding;
+	padding-right: $normal-padding;
+}
+.et-normal-padding-y {
+	padding-top: $normal-padding;
+	padding-bottom: $normal-padding;
+}
+
+/**
+ * Shadow
+ */
+
+// Shadow slow blur
+.et-shadow-100 {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+// Shadow hard blur
+.et-shadow-500 {
+	box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+/**
+ * Typography
+ */
+.et-text-highlight {
+	color: $primary-color;
+}
+.et-text-highlight-2 {
+	color: $secondary-color;
+}
+.et-text-heading-1 {
+	font-size: 24px;
+	font-weight: $font-weight-bold;
+}
+.et-text-heading-2 {
+	font-size: 20px;
+	font-weight: $font-weight-bold;
+}
+.et-text-heading-3 {
+	font-size: 16px;
+	font-weight: $font-weight-bold;
+}
+.et-text-heading-4 {
+	font-size: 14px;
+	font-weight: $font-weight-bold;
+}
+.et-text-caption {
+	color: $text-hint;
+}
+
+/**
+ * List
+ */
+.et-list {
+	list-style: none;
+	padding-left: 0;
+	&:not(.no-padding) {
+		padding-right: 24px;
+	}
+	.et-list-title {
+		color: $primary-color;
+		@extend .et-text-heading-4;
+		text-transform: uppercase;
+		font-weight: $font-weight-bolder;
+	}
+	.et-list-item {
+		@extend .transition;
+		font-weight: $font-weight;
+		padding: 3px 0;
+		border-radius: $border-radius-small;
+		cursor: pointer;
+		&:hover {
+			font-weight: $font-weight-bold;
+			background: rgba($secondary-color-light, 0.3);
+			padding-left: 10px;
+		}
+	}
+}

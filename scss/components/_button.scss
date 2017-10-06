@@ -1,0 +1,29 @@
+.btn {
+	@extend .transition;
+	font-weight: $font-weight-bolder;
+	height: 40px;
+	padding: 10px 24px;
+}
+.btn-default {
+	background: $gray;
+	color: $text-color;
+	border: none;
+}
+.btn-secondary {
+	background: $secondary-color;
+	color: $white;
+	&:hover, &:focus {
+		color: $white;
+	}
+	&:hover {
+		background: $secondary-color-light;
+		box-shadow: 0 2px 10px 5px rgba(255,205,3,0.3);
+	}
+	&:focus {
+		background: $secondary-color-dark;
+	}
+}
+.btn-accent {
+	background: $accent-color;
+	color: $white;
+}
