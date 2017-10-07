@@ -42,8 +42,8 @@
 	.et-result-item {
 		flex: 0 0 33.33333333333%;
 		opacity: 0.5;
-		margin-left: 15px;
-		margin-right: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
 		@extend .transition;
 
 		.et-panel-header {
