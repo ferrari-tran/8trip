@@ -10,6 +10,7 @@ $secondary-color: 				#FFCD03;
 $secondary-color-dark:			#f9c804;
 
 $accent-color: 					#FF5D6E;
+$accent-color-dark: 			#ec4d5e;
 
 $gray-light:					#F4F7F9;
 $gray:							#DEDEDE;
@@ -17,8 +18,8 @@ $gray-dark: 					#C2C2C2;
 $gray-darker:					#9B9B9B;
 
 $border-color: 					$gray;
-$text-hint:						$gray-dark;
 $text-color: 					#464646;
+$text-hint:						rgba($text-color, 0.54);
 $background-dark:				#2F2F2F;
 $background-light:				#fafafa;
 
@@ -28,6 +29,8 @@ $white:							#ffffff;
  * Sizing
  */
 $normal-padding: 				30px;
+$normal-spacing-item:			24px;
+$small-spacing-item:			12px;
 
 /**
  * Other

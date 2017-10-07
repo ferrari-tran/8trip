@@ -4,10 +4,29 @@
 	height: 40px;
 	padding: 10px 24px;
 }
+.btn-small {
+	height: 36px;
+	padding: 8px 16px;
+}
 .btn-default {
 	background: $gray;
 	color: $text-color;
 	border: none;
+}
+.btn-primary {
+	background: $primary-color;
+	color: $white;
+	border: none;
+	&:hover, &:focus {
+		color: $white;
+	}
+	&:hover {
+		background: $primary-color-light;
+		box-shadow: 0 2px 20px 5px rgba($primary-color,0.1);
+	}
+	&:focus {
+		background: $primary-color-dark;
+	}
 }
 .btn-secondary {
 	background: $secondary-color;
@@ -26,4 +45,17 @@
 .btn-accent {
 	background: $accent-color;
 	color: $white;
+}
+.btn-accent-outline {
+	background: transparent;
+	border: solid 1px $accent-color;
+	color: $accent-color;
+	&:hover {
+		background: $accent-color;
+		color: $white;
+	}
+	&:active {
+		background: $accent-color-dark;
+		color: $white;
+	}
 }

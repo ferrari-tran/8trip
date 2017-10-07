@@ -1,0 +1,87 @@
+.et-table-result {
+	.et-table-heading {
+		display: flex;
+		padding: 0 30px;
+		align-items: center;
+		margin-bottom: 12px;
+		.et-td {
+			flex: 0 1 25%;
+		}
+	}
+	.et-row-result {
+		display: flex;
+		align-items: center;
+		.et-td {
+			flex: 0 1 25%;
+			p {
+				margin-bottom: 5px;
+				line-height: 1.2;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.btn-booking {
+			width: 100px;
+		}
+	}
+	.col-booking {
+		text-align: center;
+	}
+	.et-table-body {
+		> ul {
+			> li {
+				&:not(:last-child) {
+					margin-bottom: $normal-spacing-item;
+				}
+			}
+		}
+	}
+	.et-brand {
+		margin-bottom: 8px;
+		> ul {
+			display: inline-flex;
+			flex-wrap: wrap;
+			margin-right: 5px;
+			> li {
+				> img {
+					height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.et-detail-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.et-detail-item {
+		flex: 0 0 calc(50% - 15px);
+	}
+}
+
+/**
+ * Table no border
+ */
+.table-no-border {
+	> tbody > tr > td {
+		border-top: none;
+		padding: 5px;
+	}
+}
+.et-table-detail-center {
+	tr {
+		td {
+			img {
+				height: 30px;
+			}
+			&:first-child {
+				text-align: right;
+			}
+			&:last-child {
+				font-weight: $font-weight-bold;
+			}
+		}
+	}
+}

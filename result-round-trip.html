@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+		<title>Kết quả khứ hồi</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<div class="wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 col-lg-offset-1">
+
+
+						<!-- Trip: Title -->
+						<section class="et-trip-title">
+							<div class="row">
+								<div class="col-xs-10">
+									<div class="et-trip-title-block">
+										<h3 class="et-text-heading-1 et-trip-heading">Hà Nội (HAN) ⇆ Hồ Chí Minh (SGN)</h3>
+										<ul class="et-trip-detail">
+											<li><p>Ngày khởi hành: <span class="et-text-highlight et-text-heading-4">01/10/2017</span></p></li>
+											<li><p>Số người: <span class="et-text-highlight et-text-heading-4">2 người lớn, 1 em bé</span></p></li>
+										</ul>
+										<em class="et-trip-notice et-text-highlight-3">(Giá vé chưa bao gồm thuế và phụ phí)</em>
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<button class="btn btn-secondary btn-change-search btn-block et-normal-margin-t" data-target="form-search" data-ref="btn-change-search">Đổi tìm kiếm</button>
+								</div>
+							</div>
+						</section>
+						<!-- End title -->
+								
+
+
+						<!-- Trip: form -->
+						<section class="et-form-search et-shadow-500" data-control="btn-change-search" data-ref="form-search">
+							<div class="et-normal-padding">
+								<div class="et-tab-pane-i">
+									<form class="et-form">
+										<div class="row">
+
+											<div class="col-xs-4">
+												<article class="et-place-group et-reverse-group">
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_checkin.svg" alt="place">Điểm đi</label>
+														<input 
+															type="text" 
+															class="form-control et-city-picker" 
+															data-ref="start-place" 
+															placeholder="Lựa chọn điểm đi" />
+													</div>
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_checkin.svg" alt="place">Điểm đến</label>
+														<input 
+															type="text" 
+															class="form-control et-city-picker" 
+															placeholder="Lựa chọn điểm đến" 
+															data-ref="end-place" />
+													</div>
+													<div class="et-reverse-control">
+														<button 
+															class="btn-reverse-control" 
+															data-target-1="start-place" 
+															data-target-2="end-place"
+														></button>
+													</div>
+												</article>
+											</div>
+
+											<div class="col-xs-4">
+												<article class="et-time-group">
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_calendar.svg" alt="place">Ngày đi</label>
+														<input 
+															type="text" 
+															class="form-control et-datepicker" 
+															placeholder="dd/mm/yy"
+															data-date="day-out"
+														>
+													</div>
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_calendar.svg" alt="place">Ngày về</label>
+														<input 
+															type="text" 
+															class="form-control et-datepicker" 
+															placeholder="dd/mm/yy"
+															data-date="day-on"
+														>
+													</div>
+												</article>
+											</div>
+
+											<div class="col-xs-4">
+												<div class="et-client-group">
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_user.svg" alt="place"> Người lớn
+														</label>
+														<select class="form-control">
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														  <option value="6">6</option>
+														  <option value="7">7</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_child.svg" alt="place"> Trẻ em
+														</label>
+														<select class="form-control">
+															<option value="1">0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														  <option value="4">4</option>
+														  <option value="5">5</option>
+														  <option value="6">6</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<label class="et-form-label">
+															<img src="./images/ic_baby_transport.svg" alt="place"> Em bé
+														</label>
+														<select class="form-control">
+															<option value="1">0</option>
+														  <option value="1">1</option>
+														  <option value="2">2</option>
+														  <option value="3">3</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="et-button-group">
+													<!-- <button class="btn btn-default" type="reset">Đặt lại</button> -->
+													<button class="btn btn-secondary btn-block">Tìm chuyến bay</button>
+												</div>
+											</div>
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+						<!-- End form -->
+
+
+						
+						<!-- Trip: result -->
+						<section class="et-form-result">
+							<article class="et-result-item active">
+								<header class="et-panel-header">
+									<div class="media">
+										<div class="media-left media-middle">
+											<span class="et-panel-count">1</span>
+										</div>
+										<div class="media-body">
+											<h6 class="et-text-heading-3">Chiều đi:</h6>
+											<p>Chủ nhật - 01/10</p>
+											<p>Hà Nội → Hồ Chí Minh</p>
+										</div>
+									</div>
+								</header>
+
+								<div class="et-panel-sticky">
+									<div class="et-filter-list">
+										<div class="et-filter-item">
+											<span class="et-text-heading-4">Bộ lọc:</span>
+											<a href="#" class="et-link et-link-popover">Điểm dừng</a>
+											<a href="#" class="et-link et-link-popover">Thời gian bay</a>
+											<a href="#" class="et-link et-link-popover">Hãng bay</a>
+											<a href="#" class="et-link et-link-popover">Thêm bộ lọc</a>
+										</div>
+										<div class="et-filter-item">
+											<a class="btn-toggle-filter-by-date et-text-highlight-3 et-text-heading-4" href="#">Vé ngày khác</a>
+										</div>
+									</div>
+
+									<div class="et-filter-slide">
+										filter ticket by day
+									</div>
+								</div>
+
+								<div class="et-panel-body">
+									<div class="et-table-result">
+										<!-- 
+												Mô tả bộ lọc:
+												- Mặc định lọc theo giá vé tăng dần, các cột còn lại không lọc thì icon sẽ ở trạng thái bình thường.
+												- Khi click vào bộ lọc, kết quả sẽ lọc theo 1 điều kiện duy nhất. Icon ở trạng thái lọc của item được chọn. Icon lọc cũ sẽ về trạng thái bình thường
+										 -->
+										<header class="et-table-heading">
+											<div class="et-td col-time-start">
+												<a class="et-link et-link-order" href="#">Khởi hành</a>
+											</div>
+											<div class="et-td col-time-end">
+												<a class="et-link et-link-order" href="#">Hạ cánh</a>
+											</div>
+											<div class="et-td col-total-time">
+												<a class="et-link et-link-order" href="#">Thời gian bay</a>
+											</div>
+											<div class="et-td col-booking">
+												<a class="et-link et-link-order" href="#">Giá vé</a>
+											</div>
+										</header>
+
+										<section class="et-table-body">
+											<ul class="et-reset-ul">
+												<li>
+													<div class="et-panel">
+														<div class="et-flexbox et-justify-between">
+															<div class="et-brand">
+																<ul class="et-reset-ul">
+																	<li><img src="images/brand_vietjet.png" alt="Vietjet"></li>
+																</ul>
+																<!-- 
+																	Nếu có nhiều hơn 1 hãng bay thì text: "Nhiều hãng bay"
+																 -->
+																- <span>VietJet Air</span>
+															</div>
+															<div class="et-detail">
+																<a href="#" class="et-link-dark">Chi tiết chuyến bay →</a>
+															</div>
+														</div>
+
+														<div class="et-row-result">
+															<div class="et-td col-time-start">
+																<p class="et-text-heading-3">11:00</p>
+																<p class="et-text-caption">Hà Nội (HAN)</p>
+															</div>
+															<div class="et-td col-time-end">
+																<p class="et-text-heading-3">13:00</p>
+																<p class="et-text-caption">Hồ Chí Minh (SGN)</p>
+															</div>
+															<div class="et-td col-total-time">
+																<p class="et-text-heading-3">2h 00m</p>
+																<p class="et-text-caption">Bay thẳng</p>
+															</div>
+															<div class="et-td col-booking">
+																<p class="et-heading-highlight et-format-money">2930000</p>
+																<button class="btn btn-small btn-accent-outline btn-booking">Chọn</button>
+															</div>
+														</div>
+
+														<div class="et-row-detail">
+															<div class="et-title-style-1"><span>Thông tin chuyến bay</span></div>
+															<div class="et-detail-list">
+																<div class="et-detail-item">
+																	<table class="table table-no-border et-table-detail-center">
+																		<tbody>
+																			<tr>
+																				<td><img src="images/brand_vietjet.png" alt="VietJet"></td>
+																				<td><span class="badge badge-secondary">Không hoàn tiền</span></td>
+																			</tr>
+																			<tr>
+																				<td>Hãng bay:</td>
+																				<td>Vietjet Air</td>
+																			</tr>
+																			<tr>
+																				<td>Số hiệu:</td>
+																				<td>VJ-195</td>
+																			</tr>
+																			<tr>
+																				<td>Máy bay:</td>
+																				<td>Airbus A230</td>
+																			</tr>
+																			<tr>
+																				<td>Hạng ghế:</td>
+																				<td>Eco - Phổ thông</td>
+																			</tr>
+																			<tr>
+																				<td>Hành lý xách tay:</td>
+																				<td>7kg</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="et-detail-item">
+																	2
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</li>
+
+											</ul>
+										</section>
+
+									</div>
+								</div>
+							</article>
+
+							<article class="et-result-item">
+								<header class="et-panel-header">
+									<div class="media">
+										<div class="media-left media-middle">
+											<span class="et-panel-count">2</span>
+										</div>
+										<div class="media-body">
+											<h6 class="et-text-heading-3">Chiều về:</h6>
+											<p>Chủ nhật - 08/10</p>
+											<p>Hồ Chí Minh → Hà Nội</p>
+										</div>
+									</div>
+								</header>
+							</article>
+						</section>
+						<!-- End result -->
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<section id="et-citypicker-dialog" class="et-citypicker-dialog" title="Lựa chọn địa điểm">
+			<div class="et-citypicker-dialog-i">
+				<div class="et-dialog-column">
+					<ul class="et-list">
+						<li class="et-list-title">Miền Bắc</li>
+						<li class="et-list-item">Hà Nội</li>
+						<li class="et-list-item">Vinh</li>
+						<li class="et-list-item">Hải Phòng</li>
+					</ul>
+					<ul class="et-list">
+						<li class="et-list-title">Miền Trung</li>
+						<li class="et-list-item">Thanh Hoá</li>
+						<li class="et-list-item">Đà Nẵng</li>
+						<li class="et-list-item">Huế</li>
+						<li class="et-list-item">Đồng Hới</li>
+						<li class="et-list-item">Tuy Hoà</li>
+						<li class="et-list-item">Chu Lai</li>
+						<li class="et-list-item">Pleiku</li>
+					</ul>
+				</div>
+				<div class="et-dialog-column">
+					<ul class="et-list">
+						<li class="et-list-title">Miền Nam</li>
+						<li class="et-list-item">Hồ Chí Minh</li>
+						<li class="et-list-item">Nha Trang</li>
+						<li class="et-list-item">Đà Lạt</li>
+						<li class="et-list-item">Phú Quốc</li>
+						<li class="et-list-item">Cần Thơ</li>
+						<li class="et-list-item">Côn Đảo</li>
+						<li class="et-list-item">Rạch Giá</li>
+						<li class="et-list-item">Cà Mau</li>
+						<li class="et-list-item">Buôn Ma Thuột</li>
+						<li class="et-list-item">Quy Nhơn</li>
+					</ul>
+				</div>
+				<div class="et-dialog-column">
+					<ul class="et-list no-padding">
+						<li class="et-list-title">Quốc tế</li>
+						<li class="et-list-notice">
+							<div class="form-group form-group-sm">
+								<label class="small">Hãy nhập tên thành phố hoặc mã sân bay</label>
+								<input type="text" class="form-control" placeholder="Hà Nội (HAN)">
+							</div>
+						</li>
+					</ul>
+					<ul class="et-list">
+						<li class="et-list-title">Điểm đến phổ biến</li>
+						<li class="et-list-item">Bangkok</li>
+						<li class="et-list-item">Singapore</li>
+						<li class="et-list-item">Kuala Lumpur</li>
+						<li class="et-list-item">Tokyo</li>
+						<li class="et-list-item">Seoul</li>
+						<li class="et-list-item">Quảng Châu</li>
+						<li class="et-list-item">Hong Kong</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<script src="./vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="./vendor/bootstrap/bootstrap.min.js"></script>
+		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
+		<script src="./vendor/accounting/accounting.min.js"></script>
+		<script src="./js/main.js"></script>
+
+	</body>
+</html>

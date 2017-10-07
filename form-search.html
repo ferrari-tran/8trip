@@ -274,40 +274,5 @@
 		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="./js/main.js"></script>
 
-		<script>
-
-			var dateToday = new Date();
-			$(document).ready(function() {
-				// Datepicker
-				var dates = $('.et-datepicker').datepicker({
-					defaultDate: '+1w',
-					dateFormat: 'dd/mm/yy',
-					minDate: dateToday,
-					onSelect: function(selectedDate) {
-						var option = $(this).data('date') === 'day-out' ? 'minDate' : 'maxDate',
-								instance = $(this).data('datepicker'),
-								date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
-						dates.not(this).datepicker('option', option, date);
-					}
-				});
-
-				// Citypicker
-				$('.et-city-picker').click(function(e) {
-					$('#et-citypicker-dialog').dialog({
-						position: {
-							my: 'left top',
-							at: 'left bottom',
-							of: this
-						},
-						minWidth: 600,
-						draggable: false,
-						closeOnEscape: true,
-						hide: { effect: "fade", duration: 300 },
-						show: { effect: "fade", duration: 300 }
-					});
-				});
-			});
-
-		</script>
 	</body>
 </html>
