@@ -100,3 +100,46 @@
 .et-filter-slide {
 	margin-bottom: $normal-spacing-item;
 }
+
+.et-timeline {
+	.et-timeline-period {
+		position: relative;
+		margin-bottom: $small-spacing-item;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: solid 2px $primary-color;
+			top: 5px;
+			left: -20px;
+			@extend .transition;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: calc(100% + 8px);
+			left: -15px;
+			top: 15px;
+			background: $border-color;
+		}
+		&:hover {
+			&::before {
+				background: $primary-color;
+			}
+		}
+	}
+}
+
+table.et-timeline {
+	> tbody > tr:last-child {
+		.et-timeline-period {
+			margin-bottom: 0;
+		}
+		.et-timeline-period::after {
+			display: none;
+		}
+	}
+}
