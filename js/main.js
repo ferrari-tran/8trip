@@ -49,6 +49,17 @@ $(document).ready(function() {
 				$(numberElm).text(money);
 			}
 		});
-		
 	}
+
+	// Toggle choose way
+	$('.et-form-result .et-result-item').click(function() {
+		var parent = $(this).closest('.et-form-result');
+		var self = this;
+		if (!$(self).hasClass('active')) {
+			$(parent).find('.et-result-item').removeClass('active');
+			setTimeout(function() {
+				$(self).addClass('active');
+			}, 10);
+		}
+	});
 });
