@@ -941,6 +941,9 @@
 			</div>
 		</div>
 
+
+
+		<!-- Datepicker -->
 		<section id="et-citypicker-dialog" class="et-citypicker-dialog" title="Lựa chọn địa điểm">
 			<div class="et-citypicker-dialog-i">
 				<div class="et-dialog-column">
@@ -1000,6 +1003,18 @@
 			</div>
 		</section>
 
+		<!-- Result modal -->
+		<section class="modal fade bs-example-modal-lg et-modal-result" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="exampleModalLabel">Thông tin chuyến bay</h4>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
 		<!-- Scripts -->
 		<script src="./vendor/jquery/jquery-3.2.1.min.js"></script>
 		<script src="./vendor/bootstrap/bootstrap.min.js"></script>
@@ -1024,6 +1039,10 @@
 						nextArrow: '<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'
 					});
 				}
+
+				$('.btn-booking').click(function() {
+					$('.et-modal-result').modal('show');
+				});
 			});
 		</script>
 
