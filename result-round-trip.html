@@ -10,6 +10,8 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="./vendor/slick/slick.min.css">
+		<link rel="stylesheet" href="./vendor/slick/slick-theme.min.css">
 		<link rel="stylesheet" href="css/style.min.css">
 
 		<!--[if lt IE 9]>
@@ -57,114 +59,122 @@
 							<div class="et-normal-padding">
 								<div class="et-tab-pane-i">
 									<form class="et-form">
-										<div class="row">
+												<div class="row">
 
-											<div class="col-xs-4">
-												<article class="et-place-group et-reverse-group">
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_checkin.svg" alt="place">Điểm đi</label>
-														<input 
-															type="text" 
-															class="form-control et-city-picker" 
-															data-ref="start-place" 
-															placeholder="Lựa chọn điểm đi" />
+													<div class="col-xs-4">
+														<article class="et-place-group et-reverse-group">
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_checkin.svg" alt="place">Điểm đi</label>
+																<input 
+																	type="text" 
+																	class="form-control et-city-picker" 
+																	data-ref="start-place" 
+																	placeholder="Lựa chọn điểm đi" />
+															</div>
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_checkin.svg" alt="place">Điểm đến</label>
+																<input 
+																	type="text" 
+																	class="form-control et-city-picker" 
+																	placeholder="Lựa chọn điểm đến" 
+																	data-ref="end-place" />
+															</div>
+															<div class="et-reverse-control">
+																<button 
+																	class="btn-reverse-control" 
+																	data-target-1="start-place" 
+																	data-target-2="end-place"
+																></button>
+															</div>
+														</article>
 													</div>
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_checkin.svg" alt="place">Điểm đến</label>
-														<input 
-															type="text" 
-															class="form-control et-city-picker" 
-															placeholder="Lựa chọn điểm đến" 
-															data-ref="end-place" />
-													</div>
-													<div class="et-reverse-control">
-														<button 
-															class="btn-reverse-control" 
-															data-target-1="start-place" 
-															data-target-2="end-place"
-														></button>
-													</div>
-												</article>
-											</div>
 
-											<div class="col-xs-4">
-												<article class="et-time-group">
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_calendar.svg" alt="place">Ngày đi</label>
-														<input 
-															type="text" 
-															class="form-control et-datepicker" 
-															placeholder="dd/mm/yy"
-															data-date="day-out"
-														>
+													<div class="col-xs-4">
+														<article class="et-time-group">
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_calendar.svg" alt="place">Ngày đi</label>
+																<input 
+																	type="text" 
+																	class="form-control et-datepicker" 
+																	placeholder="dd/mm/yy"
+																	data-date="day-out"
+																>
+															</div>
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_calendar.svg" alt="place">Ngày về</label>
+																<input 
+																	type="text" 
+																	class="form-control et-datepicker" 
+																	placeholder="dd/mm/yy"
+																	data-date="day-on"
+																>
+															</div>
+														</article>
 													</div>
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_calendar.svg" alt="place">Ngày về</label>
-														<input 
-															type="text" 
-															class="form-control et-datepicker" 
-															placeholder="dd/mm/yy"
-															data-date="day-on"
-														>
-													</div>
-												</article>
-											</div>
 
-											<div class="col-xs-4">
-												<div class="et-client-group">
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_user.svg" alt="place"> Người lớn
-														</label>
-														<select class="form-control">
-														  <option value="1">1</option>
-														  <option value="2">2</option>
-														  <option value="3">3</option>
-														  <option value="4">4</option>
-														  <option value="5">5</option>
-														  <option value="6">6</option>
-														  <option value="7">7</option>
-														</select>
+													<div class="col-xs-4">
+														<div class="form-group">
+															<label class="et-form-label">
+																<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
+															</label>
+															<select class="form-control">
+															  <option value="1">Economy - phổ thông</option>
+															  <option value="2">Business - thương gia</option>
+															</select>
+														</div>
+														<div class="et-client-group">
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_user.svg" alt="place"> Người lớn
+																</label>
+																<select class="form-control">
+																  <option value="1">1</option>
+																  <option value="2">2</option>
+																  <option value="3">3</option>
+																  <option value="4">4</option>
+																  <option value="5">5</option>
+																  <option value="6">6</option>
+																  <option value="7">7</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_child.svg" alt="place"> Trẻ em
+																</label>
+																<select class="form-control">
+																	<option value="1">0</option>
+																  <option value="1">1</option>
+																  <option value="2">2</option>
+																  <option value="3">3</option>
+																  <option value="4">4</option>
+																  <option value="5">5</option>
+																  <option value="6">6</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_baby_transport.svg" alt="place"> Em bé
+																</label>
+																<select class="form-control">
+																	<option value="1">0</option>
+																  <option value="1">1</option>
+																  <option value="2">2</option>
+																  <option value="3">3</option>
+																</select>
+															</div>
+														</div>
 													</div>
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_child.svg" alt="place"> Trẻ em
-														</label>
-														<select class="form-control">
-															<option value="1">0</option>
-														  <option value="1">1</option>
-														  <option value="2">2</option>
-														  <option value="3">3</option>
-														  <option value="4">4</option>
-														  <option value="5">5</option>
-														  <option value="6">6</option>
-														</select>
-													</div>
-													<div class="form-group">
-														<label class="et-form-label">
-															<img src="./images/ic_baby_transport.svg" alt="place"> Em bé
-														</label>
-														<select class="form-control">
-															<option value="1">0</option>
-														  <option value="1">1</option>
-														  <option value="2">2</option>
-														  <option value="3">3</option>
-														</select>
-													</div>
+
 												</div>
-
-												<div class="et-button-group">
+												<div class="text-center">
 													<!-- <button class="btn btn-default" type="reset">Đặt lại</button> -->
-													<button class="btn btn-secondary btn-block">Tìm chuyến bay</button>
+													<button class="btn btn-secondary mx-auto">Tìm chuyến bay</button>
 												</div>
-											</div>
-
-										</div>
-									</form>
+											</form>
 								</div>
 							</div>
 						</section>
@@ -198,12 +208,59 @@
 											<a href="#" class="et-link et-link-popover">Thêm bộ lọc</a>
 										</div>
 										<div class="et-filter-item">
-											<a class="btn-toggle-filter-by-date et-text-highlight-3 et-text-heading-4" href="#">Vé ngày khác</a>
+											<a class="btn-toggle-filter-by-date btn-toggle et-text-highlight-3 et-text-heading-4" 
+													href="#"
+													data-ref="btn-toggle-filter-by-date-1"
+													data-target="filter-slide-1"
+											>Vé ngày khác</a>
 										</div>
 									</div>
 
-									<div class="et-filter-slide">
-										filter ticket by day
+									<div class="et-filter-slider" data-ref="filter-slide-1" data-control="btn-toggle-filter-by-date-1">
+										<div class="slick-carousel">
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">01/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">02/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">03/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">04/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">05/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">06/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+											<div class="et-filter-slide-item">
+												<article class="et-block">
+													<p>Chủ nhật - <span class="et-text-bold">07/10</span></p>
+													<p class="et-format-money row-highlight">2930000</p>
+												</article>
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -948,7 +1005,26 @@
 		<script src="./vendor/bootstrap/bootstrap.min.js"></script>
 		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="./vendor/accounting/accounting.min.js"></script>
+		<script src="./vendor/slick/slick.min.js"></script>
 		<script src="./js/main.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				if (typeof $.slick !== undefined) {
+					$('.et-filter-slider .slick-carousel').slick({
+						variableWidth: true,
+						infinite: false,
+						slidesToShow: 1,
+						speed: 300,
+						arrows: true,
+						focusOnSelect: true,
+						easing: 'ease-in-out',
+						prevArrow: '<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
+						nextArrow: '<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'
+					});
+				}
+			});
+		</script>
 
 	</body>
 </html>

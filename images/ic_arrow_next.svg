@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="24px" viewBox="0 0 14 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-nav-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Result-khứ-hồi---chiều-đi" transform="translate(-1126.000000, -1091.000000)" fill="#C2C2C2">
+            <g id="Group-8" transform="translate(390.000000, 1007.000000)">
+                <g id="Group-5" transform="translate(0.000000, 45.000000)">
+                    <g id="Tab-giá-ngày-khác" transform="translate(0.000000, 15.000000)">
+                        <g id="arrow-nav-right" transform="translate(736.000000, 24.000000)">
+                            <g id="arrow-point-to-right">
+                                <path d="M13.0142884,13.1881234 L2.83111646,23.5074218 C2.18334372,24.1641927 1.13309126,24.1641927 0.485633004,23.5074218 C-0.161877668,22.851235 -0.161877668,21.7869633 0.485633004,21.1308297 L9.49616802,11.9998274 L0.485895069,2.86914376 C-0.161615603,2.21269146 -0.161615603,1.14852594 0.485895069,0.492339221 C1.13340574,-0.164113074 2.18360578,-0.164113074 2.83137852,0.492339221 L13.0145504,10.8117969 C13.3383058,11.1400496 13.5,11.5698057 13.5,11.9997743 C13.5,12.4299553 13.3379913,12.8600301 13.0142884,13.1881234 Z" id="Shape" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

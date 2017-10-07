@@ -1,0 +1,47 @@
+.et-filter-slider {
+	padding: 12px 20px;
+	border: none;
+	border-top: solid 1px $border-color;
+	border-bottom: solid 1px $border-color;
+	margin-bottom: $normal-spacing-item;
+	.et-filter-slide-item {
+		outline: none;
+		.row-highlight {
+			font-weight: bold;
+			font-size: 16px;
+		}
+		&.slick-active {
+			.et-block {
+				background: $primary-color;
+				color: $white;
+			}
+			.row-highlight {
+				color: $secondary-color;
+			}
+		}
+	}
+	.et-arrow {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		&-prev {
+			left: -20px;
+		}
+		&-next {
+			right: -20px;
+		}
+		&[aria-disabled=true] {
+			opacity: 0.5;
+			cursor: no-drop;
+		}
+	}
+	.et-block {
+		text-align: center;
+		@extend .transition;
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

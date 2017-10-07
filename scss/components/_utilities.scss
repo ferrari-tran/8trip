@@ -10,6 +10,11 @@
 	border-bottom: dashed 1px $border-color;
 	margin-bottom: $small-spacing-item;
 }
+.et-block {
+	background: $gray-light;
+	border-radius: $border-radius-normal;
+	padding: 15px;
+}
 
 /**
  * Sizing
@@ -33,6 +38,10 @@
 }
 .et-small-margin-b {
 	margin-bottom: $small-spacing-item;
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /**
@@ -90,6 +99,9 @@
 	color: $text-hint;
 	font-weight: $font-weight;
 	font-size: 12px;
+}
+.et-text-bold {
+	font-weight: $font-weight-bolder;
 }
 .et-title-style-1 {
 	font-size: 14px;

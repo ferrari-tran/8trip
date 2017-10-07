@@ -37,9 +37,13 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	margin-left: -15px;
+	margin-right: -15px;
 	.et-result-item {
-		flex: 0 0 calc((100% - 30px) * 1/3 );
+		flex: 0 0 33.33333333333;
 		opacity: 0.5;
+		margin-left: 15px;
+		margin-right: 15px;
 		@extend .transition;
 
 		.et-panel-header {
@@ -79,19 +83,23 @@
 		}
 
 		&.active {
-			flex: 0 0 calc((100% - 30px) * 2/3 );
+			flex: 0 0 66.666666666666667%;
+			max-width: 66.666666666666667%;
 			opacity: 1;
 		}
 
 		&:not(.active) {
 			cursor: pointer;
-			.et-detail, .col-booking, .et-panel-sticky {
+			.et-panel {
+				padding: 15px;
+			}
+			.et-detail, .col-booking, .et-panel-sticky, .col-total-time {
 				display: none;
 			}
 			.et-row-result {
 				align-items: flex-start;
-				.et-td:not(.col-total-time) {
-					flex: 0 1 40%;
+				.et-td {
+					flex: 0 1 50%;
 					padding-right: 10px;
 				}
 			}
@@ -103,8 +111,11 @@
 		}
 
 	}
-	.et-row-detail {
+	.et-row-detail, .et-filter-slider {
 		display: none;
+	}
+	.et-filter-slide {
+		overflow: hidden;
 	}
 
 }
