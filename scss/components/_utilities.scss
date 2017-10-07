@@ -5,6 +5,11 @@
 	list-style: none;
 	padding-left: 0;
 }
+.et-devider-dashed {
+	width: 100%;
+	border-bottom: dashed 1px $border-color;
+	margin-bottom: $small-spacing-item;
+}
 
 /**
  * Sizing

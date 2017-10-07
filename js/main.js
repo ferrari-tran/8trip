@@ -29,8 +29,8 @@ $(document).ready(function() {
 		});
 	});
 
-	// Toggle form search
-	$('.btn-change-search').click(function(e) {
+	// Toggle something by event click
+	$('.btn-toggle').click(function(e) {
 		e.preventDefault();
 		var target = $(this).data('target');
 		$('[data-ref="' + target + '"]').slideToggle();
