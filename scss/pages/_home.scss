@@ -1,0 +1,35 @@
+/**
+ * Footer
+ */
+.footer-content {
+	background: $background-dark;
+	color: $white;
+	padding: 50px 0;
+}
+.footer-bottom {
+	background: rgba($background-dark, 0.9);
+	color: rgba($white, 0.84);
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.et-address-block {
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100px;
+		height: 2px;
+		background: $gray-light;
+		top: 0;
+		left: 0;
+	}
+	h5 {
+		text-transform: uppercase;
+		font-weight: $font-weight;
+		font-size: 16px;
+	}
+}

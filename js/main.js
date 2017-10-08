@@ -55,7 +55,7 @@ $(document).ready(function() {
 	});
 
 	// Toggle choose way
-	$('.et-form-result .et-result-item:not(.booked)').click(function() {
+	$('.et-form-result .et-result-item:not(.booked, .fluid)').click(function() {
 		var parent = $(this).closest('.et-form-result');
 		var self = this;
 		if (!$(self).hasClass('active')) {

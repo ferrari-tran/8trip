@@ -91,9 +91,28 @@
 		&.booked {
 			opacity: 1;
 			flex: 0 0 33.33333333333%;
+			cursor: default;
 		}
 
-		&:not(.active, .booked) {
+		&.fluid {
+			flex: 0 0 100%;
+			opacity: 1;
+			.et-row-result {
+				&.one-way {
+					.et-td {
+						flex: 0 1 16.666666666667%;
+					}
+					.col-brand {
+						img {
+							height: 20px;
+							margin-bottom: $small-spacing-item;
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.active) {
 			cursor: pointer;
 			.et-panel {
 				padding: 15px;

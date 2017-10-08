@@ -26,8 +26,9 @@
 		}
 	}
 	.col-booking {
-		text-align: center;
+		text-align: right;
 	}
+	
 	.et-table-body {
 		> ul {
 			> li {
@@ -60,6 +61,13 @@
 		flex: 0 1 auto;
 		&:first-child {
 			flex: 0 1 calc(45% - 15px);
+		}
+	}
+	&.auto {
+		.et-detail-item {
+			&:first-child {
+				flex: 0 1 auto;
+			}
 		}
 	}
 }
