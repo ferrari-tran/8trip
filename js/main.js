@@ -63,6 +63,24 @@ $(document).ready(function() {
 		});
 	});
 
+	// Button reverse place choosen
+	$('.btn-reverse-control').click(function(e) {
+		e.preventDefault();
+		var target1 = $(e.target).data('target-1'),
+				target2 = $(e.target).data('target-2');
+		
+		var value1 = $('[data-ref="' + target1 + '"]').val(),
+				value2 = $('[data-ref="' + target2 + '"]').val();
+
+		if (value1 && value2) {
+			value2 = [value1, value1 = value2][0];
+			setTimeout(function() {
+				$('[data-ref="' + target1 + '"]').val(value1);
+				$('[data-ref="' + target2 + '"]').val(value2);
+			}, 10);
+		}
+	});
+
 	// Toggle something by event click
 	$('.btn-toggle').click(function(e) {
 		e.preventDefault();
