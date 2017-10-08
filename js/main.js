@@ -15,6 +15,22 @@ $(document).ready(function() {
 		});
 	}
 
+	// Slick
+	if (typeof $.slick !== undefined) {
+		$('.et-filter-slider .slick-carousel').slick({
+			variableWidth: true,
+			infinite: false,
+			slidesToShow: 1,
+			speed: 300,
+			arrows: true,
+			focusOnSelect: true,
+			draggable: false,
+			easing: 'ease-in-out',
+			prevArrow: '<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
+			nextArrow: '<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'
+		});
+	}
+
 	// Citypicker
 	$('.et-city-picker').click(function(e) {
 		$('#et-citypicker-dialog').dialog({
@@ -39,7 +55,7 @@ $(document).ready(function() {
 	});
 
 	// Toggle choose way
-	$('.et-form-result .et-result-item').click(function() {
+	$('.et-form-result .et-result-item:not(.booked)').click(function() {
 		var parent = $(this).closest('.et-form-result');
 		var self = this;
 		if (!$(self).hasClass('active')) {
