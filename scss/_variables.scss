@@ -35,11 +35,12 @@ $small-spacing-item:			12px;
 /**
  * Other
  */
-$font-family: 					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+// $font-family: 					-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family:					'Roboto', sans-serif;
 $border-radius-big:				10px;
 $border-radius-normal: 			5px;
 $border-radius-small: 			3px;
 
-$font-weight-bolder:			600;
-$font-weight-bold: 				500;
+$font-weight-bolder:			500;
+$font-weight-bold: 				400;
 $font-weight:					300;

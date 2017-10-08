@@ -59,7 +59,9 @@ $(document).ready(function() {
 			var money = accounting.formatMoney($(numberElm).text(), {
 				symbol: '₫',
 				format: '%v %s',
-				precision: 0
+				precision: 0,
+				decimal: ',',
+				thousand: '.'
 			});
 			if (money) {
 				$(numberElm).text(money);

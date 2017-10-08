@@ -7,7 +7,7 @@
 	.et-filter-slide-item {
 		outline: none;
 		.row-highlight {
-			font-weight: bold;
+			font-weight: $font-weight-bolder;
 			font-size: 16px;
 		}
 		&.slick-active {
@@ -17,6 +17,7 @@
 			}
 			.row-highlight {
 				color: $secondary-color;
+				font-weight: bold;
 			}
 		}
 	}
