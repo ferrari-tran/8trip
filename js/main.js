@@ -15,21 +15,37 @@ $(document).ready(function() {
 		});
 	};
 
-	// Slick
-	if (typeof $.slick !== undefined) {
-		$('.et-filter-slider .slick-carousel').slick({
-			variableWidth: true,
-			infinite: false,
-			slidesToShow: 1,
-			speed: 300,
-			arrows: true,
-			focusOnSelect: true,
-			draggable: false,
-			easing: 'ease-in-out',
-			prevArrow: '<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
-			nextArrow: '<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'
+	// Carousel
+	if (typeof $.owlCarousel !== undefined) {
+		var owl = $('.et-filter-slider > div');
+
+		owl.owlCarousel({
+			autoWidth: true,
+			items: 1,
+			margin: 0,
+			dots: false,
+			nav: true,
+			navText: ['<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
+								'<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'],
+			onInitialized: callback
 		});
-	};
+
+		var owlItem = $(owl).find('.owl-item');
+		$(owlItem).click(function() {
+			$(owlItem).find('.et-block').removeClass('active');
+			var self = this;
+			setTimeout(function() {
+				$(self).find('.et-block').addClass('active');
+				// Other event will be here
+			}, 10);
+		});
+
+		function callback(event) {
+			var currItem 	= $(event.target).find('.owl-item')[event.item.index];
+			$(currItem).find('.et-block').addClass('active');
+		}
+	}
+	
 
 	// Citypicker
 	$('.et-city-picker').click(function() {
