@@ -13,7 +13,7 @@ $(document).ready(function() {
 				dates.not(this).datepicker('option', option, date);
 			}
 		});
-	}
+	};
 
 	// Slick
 	if (typeof $.slick !== undefined) {
@@ -29,21 +29,37 @@ $(document).ready(function() {
 			prevArrow: '<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
 			nextArrow: '<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'
 		});
-	}
+	};
 
 	// Citypicker
-	$('.et-city-picker').click(function(e) {
+	$('.et-city-picker').click(function() {
+		var self = this;
 		$('#et-citypicker-dialog').dialog({
 			position: {
 				my: 'left top',
 				at: 'left bottom',
-				of: this
+				of: self
 			},
 			minWidth: 600,
 			draggable: false,
 			closeOnEscape: true,
 			hide: { effect: "fade", duration: 300 },
-			show: { effect: "fade", duration: 300 }
+			show: { effect: "fade", duration: 300 },
+			open: function(event, ui) {
+				var dialog = event.target;
+				var item = $(dialog).find('.et-list-item');
+				$(item).click(function() {
+					var city = $(this).text(),
+							areaCode = $(this).data('area-code') ? $(this).data('area-code' ) : '';
+					var textInput = city + ' ' + '(' + areaCode + ')';
+
+					if (textInput) {
+						$(self).val(textInput);
+						$(dialog).dialog('close');
+						self = undefined;
+					}
+				});
+			}
 		});
 	});
 
