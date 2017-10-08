@@ -117,14 +117,25 @@
 													</div>
 
 													<div class="col-xs-4">
-														<div class="form-group">
-															<label class="et-form-label">
-																<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
-															</label>
-															<select class="form-control">
-															  <option value="1">Economy - phổ thông</option>
-															  <option value="2">Business - thương gia</option>
-															</select>
+														<div class="et-option-group">
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
+																</label>
+																<select class="form-control">
+																  <option value="Phổ thông">Phổ thông</option>
+																  <option value="Thương gia">Thương gia</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_airplane.svg" alt="place"> Chiều bay
+																</label>
+																<select class="form-control">
+																  <option value="1 chiều">1 chiều</option>
+																  <option value="Khứ hồi">Khứ hồi</option>
+																</select>
+															</div>
 														</div>
 														<div class="et-client-group">
 															<div class="form-group">
@@ -1004,12 +1015,121 @@
 		</section>
 
 		<!-- Result modal -->
-		<section class="modal fade bs-example-modal-lg et-modal-result" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<section class="modal fade bs-example-modal-lg et-modal et-modal-result" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 		  <div class="modal-dialog modal-lg" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="exampleModalLabel">Thông tin chuyến bay</h4>
+		        <h4 class="modal-title">Thông tin chuyến bay</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<table class="table et-table">
+		      		<thead>
+		      			<th>
+		      				Chiều bay<br>
+		      				<span class="et-text-caption">Thời gian</span>
+		      			</th>
+		      			<th>
+		      				Hãng hàng không<br>
+		      				<span class="et-text-caption">Loại vé</span>
+		      			</th>
+		      			<th>
+		      				Giờ bay<br>
+		      				<span class="et-text-caption">Địa điểm đi</span>
+		      			</th>
+		      			<th>
+		      				Giờ hạ cánh<br>
+		      				<span class="et-text-caption">Địa điểm tới</span>
+		      			</th>
+		      			<th>
+		      				Giá vé<br>
+		      				<span class="et-text-caption">Thuế và phụ phí</span>
+		      			</th>
+		      		</thead>
+		      		<tbody>
+		      			<tr>
+		      				<td>
+		      					<span class="et-text-bold">Chiều đi</span><br>
+										<span class="et-text-caption">Chủ nhật - 01/10/2017</span>
+		      				</td>
+		      				<td>
+		      					<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
+		      					<div>
+		      						<div class="media">
+		      							<div class="media-left media-middle et-small-padding-r">
+		      								<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
+		      							</div>
+		      							<div class="media-body">
+		      								<span class="et-text-bold">VietJet Air</span><br>
+		      								<span class="et-text-caption">Economy - phổ thông</span>
+		      							</div>
+		      						</div>
+		      					</div>
+		      				</td>
+		      				<td>
+		      					<span class="et-text-bold">11:00</span><br>
+										<span class="et-text-caption">Hà Nội (HAN)</span>
+		      				</td>
+		      				<td>
+		      					<span class="et-text-bold">13:00</span><br>
+										<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
+		      				</td>
+		      				<td>
+		      					<span class="et-price-normal et-format-money">5300000</span><br>
+		      					<span class="et-price-sub et-format-money">1070000</span>
+		      				</td>
+		      			</tr>
+		      			<tr>
+		      				<td>
+		      					<span class="et-text-bold">Chiều về</span><br>
+										<span class="et-text-caption">Chủ nhật - 08/10/2017</span>
+		      				</td>
+		      				<td>
+		      					<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
+		      					<div>
+		      						<div class="media">
+		      							<div class="media-left media-middle et-small-padding-r">
+		      								<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
+		      							</div>
+		      							<div class="media-body">
+		      								<span class="et-text-bold">VietJet Air</span><br>
+		      								<span class="et-text-caption">Economy - phổ thông</span>
+		      							</div>
+		      						</div>
+		      					</div>
+		      				</td>
+		      				<td>
+		      					<span class="et-text-bold">13:00</span><br>
+										<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
+		      				</td>
+		      				<td>
+		      					<span class="et-text-bold">15:00</span><br>
+										<span class="et-text-caption">Hà Nội (HAN)</span>
+		      				</td>
+		      				<td>
+		      					<span class="et-price-normal et-format-money">5300000</span><br>
+		      					<span class="et-price-sub et-format-money">1070000</span>
+		      				</td>
+		      			</tr>
+		      		</tbody>
+		      	</table>
+		      	<table class="table table-no-border et-table-detail-between">
+		      		<tbody>
+		      			<tr>
+		      				<td><button class="btn btn-default btn-toggle" data-ref="btn-toggle-ticket-1">Chi tiết vé</button></td>
+		      				<td>
+		      					<div class="media">
+		      						<div class="media-right">
+		      							<button class="btn btn-accent media-object">Đặt vé</button>
+		      						</div>
+		      						<div class="media-body">
+		      							<h6 class="et-price-bigger"><span class="et-format-money">12740000</span>/2 người</h6>
+		      						</div>
+		      					</div>
+		      				</td>
+		      			</tr>
+		      		</tbody>
+		      	</table>
 		      </div>
 		    </div>
 		  </div>

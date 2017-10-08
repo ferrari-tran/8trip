@@ -1,0 +1,13 @@
+.et-modal {
+	.modal-header {
+		border-bottom: none;
+		padding: 15px 30px;
+	}
+	.modal-body {
+		padding: 15px 30px;
+	}
+	.modal-title {
+		text-align: center;
+		@extend .et-text-heading-1;
+	}
+}

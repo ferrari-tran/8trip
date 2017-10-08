@@ -104,3 +104,35 @@
 		}
 	}
 }
+/**
+ * et table
+ */
+.et-table {
+	border-bottom: solid 1px $border-color;
+	> thead > tr > th {
+		font-weight: $font-weight-bolder;
+		border-bottom: solid 1px $border-color;
+		color: $text-hint;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	> tbody > tr > td {
+		border-top: none;
+		padding: 20px 10px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	.media {
+		.media-body {
+			width: auto;
+		}
+	}
+}

@@ -20,9 +20,16 @@
 			margin-bottom: 15px;
 		}
 	}
-	.et-client-group, .et-button-group {
+	.et-client-group {
 		display: flex;
 		justify-content: space-between;
+	}
+	.et-option-group {
+		display: flex;
+		justify-content: space-between;
+		> * {
+			flex: 0 0 calc(50% - 15px);
+		}
 	}
 }
 
