@@ -31,5 +31,36 @@
 		text-transform: uppercase;
 		font-weight: $font-weight;
 		font-size: 16px;
+		letter-spacing: 2px;
+	}
+}
+.et-footer-list {
+	h5 {
+		font-size: 16px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: $font-weight-bolder;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		> li > a {
+			color: $white;
+		}
+	}
+	.et-install-list {
+		display: flex;
+		justify-content: space-between;
+		> li {
+			flex: 0 0 48%;
+			img {
+				width: 100%;
+			}
+		}
+		> li:not(:last-child) {
+			img {
+				margin-right: 15px;
+			}
+		}
 	}
 }
