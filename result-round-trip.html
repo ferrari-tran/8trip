@@ -123,8 +123,8 @@
 																	<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
 																</label>
 																<select class="form-control">
-																  <option value="Phổ thông">Phổ thông</option>
-																  <option value="Thương gia">Thương gia</option>
+																	<option value="Phổ thông">Phổ thông</option>
+																	<option value="Thương gia">Thương gia</option>
 																</select>
 															</div>
 															<div class="form-group">
@@ -132,8 +132,8 @@
 																	<img src="./images/ic_airplane.svg" alt="place"> Chiều bay
 																</label>
 																<select class="form-control">
-																  <option value="1 chiều">1 chiều</option>
-																  <option value="Khứ hồi">Khứ hồi</option>
+																	<option value="1 chiều">1 chiều</option>
+																	<option value="Khứ hồi">Khứ hồi</option>
 																</select>
 															</div>
 														</div>
@@ -143,13 +143,13 @@
 																	<img src="./images/ic_user.svg" alt="place"> Người lớn
 																</label>
 																<select class="form-control">
-																  <option value="1">1</option>
-																  <option value="2">2</option>
-																  <option value="3">3</option>
-																  <option value="4">4</option>
-																  <option value="5">5</option>
-																  <option value="6">6</option>
-																  <option value="7">7</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
 																</select>
 															</div>
 															<div class="form-group">
@@ -158,12 +158,12 @@
 																</label>
 																<select class="form-control">
 																	<option value="1">0</option>
-																  <option value="1">1</option>
-																  <option value="2">2</option>
-																  <option value="3">3</option>
-																  <option value="4">4</option>
-																  <option value="5">5</option>
-																  <option value="6">6</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
 																</select>
 															</div>
 															<div class="form-group">
@@ -172,9 +172,9 @@
 																</label>
 																<select class="form-control">
 																	<option value="1">0</option>
-																  <option value="1">1</option>
-																  <option value="2">2</option>
-																  <option value="3">3</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
 																</select>
 															</div>
 														</div>
@@ -1016,126 +1016,287 @@
 
 		<!-- Result modal -->
 		<section class="modal fade bs-example-modal-lg et-modal et-modal-result" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-		  <div class="modal-dialog modal-lg" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title">Thông tin chuyến bay</h4>
-		      </div>
-		      <div class="modal-body">
-		      	<table class="table et-table">
-		      		<thead>
-		      			<th>
-		      				Chiều bay<br>
-		      				<span class="et-text-caption">Thời gian</span>
-		      			</th>
-		      			<th>
-		      				Hãng hàng không<br>
-		      				<span class="et-text-caption">Loại vé</span>
-		      			</th>
-		      			<th>
-		      				Giờ bay<br>
-		      				<span class="et-text-caption">Địa điểm đi</span>
-		      			</th>
-		      			<th>
-		      				Giờ hạ cánh<br>
-		      				<span class="et-text-caption">Địa điểm tới</span>
-		      			</th>
-		      			<th>
-		      				Giá vé<br>
-		      				<span class="et-text-caption">Thuế và phụ phí</span>
-		      			</th>
-		      		</thead>
-		      		<tbody>
-		      			<tr>
-		      				<td>
-		      					<span class="et-text-bold">Chiều đi</span><br>
-										<span class="et-text-caption">Chủ nhật - 01/10/2017</span>
-		      				</td>
-		      				<td>
-		      					<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
-		      					<div>
-		      						<div class="media">
-		      							<div class="media-left media-middle et-small-padding-r">
-		      								<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
-		      							</div>
-		      							<div class="media-body">
-		      								<span class="et-text-bold">VietJet Air</span><br>
-		      								<span class="et-text-caption">Economy - phổ thông</span>
-		      							</div>
-		      						</div>
-		      					</div>
-		      				</td>
-		      				<td>
-		      					<span class="et-text-bold">11:00</span><br>
-										<span class="et-text-caption">Hà Nội (HAN)</span>
-		      				</td>
-		      				<td>
-		      					<span class="et-text-bold">13:00</span><br>
-										<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
-		      				</td>
-		      				<td>
-		      					<span class="et-price-normal et-format-money">5300000</span><br>
-		      					<span class="et-price-sub et-format-money">1070000</span>
-		      				</td>
-		      			</tr>
-		      			<tr>
-		      				<td>
-		      					<span class="et-text-bold">Chiều về</span><br>
-										<span class="et-text-caption">Chủ nhật - 08/10/2017</span>
-		      				</td>
-		      				<td>
-		      					<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
-		      					<div>
-		      						<div class="media">
-		      							<div class="media-left media-middle et-small-padding-r">
-		      								<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
-		      							</div>
-		      							<div class="media-body">
-		      								<span class="et-text-bold">VietJet Air</span><br>
-		      								<span class="et-text-caption">Economy - phổ thông</span>
-		      							</div>
-		      						</div>
-		      					</div>
-		      				</td>
-		      				<td>
-		      					<span class="et-text-bold">13:00</span><br>
-										<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
-		      				</td>
-		      				<td>
-		      					<span class="et-text-bold">15:00</span><br>
-										<span class="et-text-caption">Hà Nội (HAN)</span>
-		      				</td>
-		      				<td>
-		      					<span class="et-price-normal et-format-money">5300000</span><br>
-		      					<span class="et-price-sub et-format-money">1070000</span>
-		      				</td>
-		      			</tr>
-		      		</tbody>
-		      	</table>
-		      	<table class="table table-no-border et-table-detail-between">
-		      		<tbody>
-		      			<tr>
-		      				<td>
-		      					<button class="btn btn-default btn-toggle" data-ref="btn-toggle-ticket-1">Chi tiết vé</button>
-		      				</td>
-		      				<td>
-		      					<div class="media">
-		      						<div class="media-body">
-		      							<span class="et-price-bigger"><span class="et-format-money">12740000</span>/2 người</span><br>
-		      							<em class="et-text-caption">(Giá vé đã bao gồm thuế và phụ phí)</em> 	
-		      						</div>
-		      						<div class="media-right media-middle">
-		      							<button class="btn btn-accent media-object">Đặt vé</button>
-		      						</div>
-		      					</div>
-		      				</td>
-		      			</tr>
-		      		</tbody>
-		      	</table>
-		      </div>
-		    </div>
-		  </div>
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Thông tin chuyến bay</h4>
+					</div>
+					<div class="modal-body">
+						<div>
+							<table class="table et-table">
+								<thead>
+									<th>
+										Chiều bay<br>
+										<span class="et-text-caption">Thời gian</span>
+									</th>
+									<th>
+										Hãng hàng không<br>
+										<span class="et-text-caption">Loại vé</span>
+									</th>
+									<th>
+										Giờ bay<br>
+										<span class="et-text-caption">Địa điểm đi</span>
+									</th>
+									<th>
+										Giờ hạ cánh<br>
+										<span class="et-text-caption">Địa điểm tới</span>
+									</th>
+									<th>
+										Giá vé<br>
+										<span class="et-text-caption">Thuế và phụ phí</span>
+									</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<span class="et-text-bold">Chiều đi</span><br>
+											<span class="et-text-caption">Chủ nhật - 01/10/2017</span>
+										</td>
+										<td>
+											<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
+											<div>
+												<div class="media">
+													<div class="media-left media-middle et-small-padding-r">
+														<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
+													</div>
+													<div class="media-body">
+														<span class="et-text-bold">VietJet Air</span><br>
+														<span class="et-text-caption">Economy - phổ thông</span>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="et-text-bold">11:00</span><br>
+											<span class="et-text-caption">Hà Nội (HAN)</span>
+										</td>
+										<td>
+											<span class="et-text-bold">13:00</span><br>
+											<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
+										</td>
+										<td>
+											<span class="et-price-normal et-format-money">5300000</span><br>
+											<span class="et-price-sub et-format-money">1070000</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span class="et-text-bold">Chiều về</span><br>
+											<span class="et-text-caption">Chủ nhật - 08/10/2017</span>
+										</td>
+										<td>
+											<!-- Khi có nhiều điểm dừng sẽ có nhiều hãng. Mỗi 1 hãng nằm trong 1 cặp thẻ div -->
+											<div>
+												<div class="media">
+													<div class="media-left media-middle et-small-padding-r">
+														<img class="media-object" src="images/brand_vietjet.png" height="20" alt="Vietjet Air">
+													</div>
+													<div class="media-body">
+														<span class="et-text-bold">VietJet Air</span><br>
+														<span class="et-text-caption">Economy - phổ thông</span>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<span class="et-text-bold">13:00</span><br>
+											<span class="et-text-caption">Hồ Chí Minh (SGN)</span>
+										</td>
+										<td>
+											<span class="et-text-bold">15:00</span><br>
+											<span class="et-text-caption">Hà Nội (HAN)</span>
+										</td>
+										<td>
+											<span class="et-price-normal et-format-money">5300000</span><br>
+											<span class="et-price-sub et-format-money">1070000</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-no-border et-table-detail-between">
+								<tbody>
+									<tr>
+										<td class="et-vertical-middle">
+											<button 
+												class="btn btn-default btn-toggle" 
+												data-ref="btn-toggle-ticket-1"
+												data-target="block-detail-ticket-1"
+											>Chi tiết vé</button>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="et-price-bigger"><span class="et-format-money">12740000</span>/2 người</span><br>
+													<em class="et-text-caption">(Giá vé đã bao gồm thuế và phụ phí)</em> 	
+												</div>
+												<div class="media-right media-middle">
+													<button class="btn btn-accent media-object">Đặt vé</button>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="et-block et-block-large block-detail-ticket" data-ref="block-detail-ticket-1" data-control="btn-toggle-ticket-1">
+							<div class="row">
+								<div class="col-xs-6">
+									<div>
+										<h5 class="et-title-style-1"><span>CHIỀU ĐI</span></h5>
+										<table class="table table-no-border et-table-detail-ticket">
+											<tbody>
+												<tr>
+													<td>Số người:</td>
+													<td class="et-text-bold">2 người lớn, 1 em bé</td>
+												</tr>
+												<tr>
+													<td>Mã chuyến bay:</td>
+													<td class="et-text-bold">VJ-195</td>
+												</tr>
+												<tr>
+													<td>Hạng ghế:</td>
+													<td class="et-text-bold">Phổ thông</td>
+												</tr>
+												<tr>
+													<td>Thời gian bay:</td>
+													<td class="et-text-bold">2 giờ 00 phút</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<table class="table table-no-border et-timeline">
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="et-timeline-period">
+																			<span class="et-text-heading-4">11:00</span><br>
+																			<span class="et-text-caption">Chủ nhật - 01/10</span>
+																		</div>
+																	</td>
+																	<td>
+																		<span class="et-text-heading-4">Hà Nội (HAN)</span><br>
+																		<span class="et-text-caption">Sân bay Nội Bài</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="et-timeline-period">
+																			<span class="et-text-heading-4">13:00</span><br>
+																			<span class="et-text-caption">Chủ nhật - 08/10</span>
+																		</div>
+																	</td>
+																	<td>
+																		<span class="et-text-heading-4">Hồ Chí Minh (SGN)</span><br>
+																		<span class="et-text-caption">Sân bay Tân Sơn Nhất</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td>Hành lý xách tay:</td>
+													<td class="et-text-bold">7kg</td>
+												</tr>
+												<tr>
+													<td>
+														Giá vé:<br>
+														<em><span class="et-text-caption">(x2 người lớn)</span></em>
+													</td>
+													<td class="et-price-normal et-format-money">5300000</td>
+												</tr>
+												<tr>
+													<td>
+														Thuế và phụ phí:
+														<br><em><span class="et-text-caption">(x2 người lớn)</span></em>
+													</td>
+													<td class="et-text-bold et-format-money">1070000</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div>
+										<h5 class="et-title-style-1"><span>CHIỀU VỀ</span></h5>
+										<table class="table table-no-border et-table-detail-ticket">
+											<tbody>
+												<tr>
+													<td>Số người:</td>
+													<td class="et-text-bold">2 người lớn, 1 em bé</td>
+												</tr>
+												<tr>
+													<td>Mã chuyến bay:</td>
+													<td class="et-text-bold">VJ-195</td>
+												</tr>
+												<tr>
+													<td>Hạng ghế:</td>
+													<td class="et-text-bold">Phổ thông</td>
+												</tr>
+												<tr>
+													<td>Thời gian bay:</td>
+													<td class="et-text-bold">2 giờ 00 phút</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<table class="table table-no-border et-timeline">
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="et-timeline-period">
+																			<span class="et-text-heading-4">13:00</span><br>
+																			<span class="et-text-caption">Chủ nhật - 08/10</span>
+																		</div>
+																	</td>
+																	<td>
+																		<span class="et-text-heading-4">Hồ Chí Minh (SGN)</span><br>
+																		<span class="et-text-caption">Sân bay Tân Sơn Nhất</span>
+																	</td>
+																</tr>
+																<tr>
+																	<td>
+																		<div class="et-timeline-period">
+																			<span class="et-text-heading-4">15:00</span><br>
+																			<span class="et-text-caption">Chủ nhật - 08/10</span>
+																		</div>
+																	</td>
+																	<td>
+																		<span class="et-text-heading-4">Hà Nội (HAN)</span><br>
+																		<span class="et-text-caption">Sân bay Nội Bài</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td>Hành lý xách tay:</td>
+													<td class="et-text-bold">7kg</td>
+												</tr>
+												<tr>
+													<td>
+														Giá vé:<br>
+														<em><span class="et-text-caption">(x2 người lớn)</span></em>
+													</td>
+													<td class="et-price-normal et-format-money">5300000</td>
+												</tr>
+												<tr>
+													<td>
+														Thuế và phụ phí:
+														<br><em><span class="et-text-caption">(x2 người lớn)</span></em>
+													</td>
+													<td class="et-text-bold et-format-money">1070000</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Scripts -->

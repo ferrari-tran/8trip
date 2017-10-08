@@ -69,6 +69,11 @@
  */
 .table {
 	margin-bottom: $small-spacing-item;
+	.table {
+		background: transparent;
+		margin: 20px 0 20px 20px;
+		width: calc(100% - 15px);
+	}
 }
 .table-no-border {
 	> tbody > tr > td {

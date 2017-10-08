@@ -178,3 +178,13 @@ table.et-timeline {
 		}
 	}
 }
+
+.block-detail-ticket {
+	display: none;
+}
+
+.et-table-detail-ticket {
+	tbody > tr > td:nth-child(2) {
+		width: 200px;
+	}
+}
