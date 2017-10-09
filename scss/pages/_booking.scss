@@ -1,0 +1,30 @@
+.et-form-group-part {
+	margin-bottom: 24px;
+}
+.et-type-client {
+	font-weight: $font-weight-bolder;
+	color: $text-hint;
+}
+.et-panel-result-booking {
+	.et-panel-heading {
+		h5 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+.et-group-booking-result {
+	.table {
+		tbody > tr > td {
+			text-align: left;
+			width: 50%;
+		}
+	}
+}
+.et-group-price-booking {
+	> div > p {
+		margin-top: 10px;
+	}
+}

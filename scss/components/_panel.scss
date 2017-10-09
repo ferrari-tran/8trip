@@ -1,0 +1,65 @@
+/**
+ * Panel
+ */
+.et-panel {
+	background: $white;
+	padding: 20px;
+	border-radius: $border-radius-normal;
+	@extend .et-shadow-100;
+	@extend .transition;
+	border: none;
+	&:hover, &:focus {
+		@extend .et-shadow-500;
+	}
+	&.et-panel-large {
+		padding: 30px;
+	}
+}
+
+.et-panel-primary {
+	background: $white;
+	border-radius: $border-radius-normal;
+	@extend .et-shadow-100;
+	@extend .transition;
+	border: none;
+	margin-bottom: $normal-padding;
+	.et-panel-heading {
+		background: $primary-color;
+		color: $white;
+		padding: 20px;
+		border-top-left-radius: $border-radius-normal;
+		border-top-right-radius: $border-radius-normal;
+	}
+	.et-panel-body {
+		padding: 20px;
+	}
+}
+
+.et-panel-secondary {
+	background: $white;
+	border-radius: $border-radius-normal;
+	@extend .et-shadow-100;
+	@extend .transition;
+	border: none;
+	margin-bottom: $normal-padding;
+	.et-panel-heading {
+		background: $secondary-color;
+		color: $white;
+		padding: 20px;
+		border-top-left-radius: $border-radius-normal;
+		border-top-right-radius: $border-radius-normal;
+	}
+	.et-panel-body {
+		padding: 20px;
+	}
+}
+
+.et-panel-highlight-1 {
+	border-left: solid 3px $primary-color;
+}
+.et-panel-highlight-2 {
+	border-left: solid 3px $secondary-color;
+}
+.et-panel-highlight-3 {
+	border-left: solid 3px $accent-color;
+}
