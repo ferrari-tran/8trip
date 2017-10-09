@@ -2,6 +2,9 @@ $(document).ready(function() {
 	var dateToday = new Date();
 	// Datepicker
 	if (typeof $.datepicker !== undefined) {
+		$('.et-datepicker-only').datepicker({
+			dateFormat: 'dd/mm/yy'
+		});
 		var dates = $('.et-datepicker').datepicker({
 			defaultDate: '+1w',
 			dateFormat: 'dd/mm/yy',

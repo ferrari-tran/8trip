@@ -43,13 +43,16 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .ui-state-highlight, 
-.ui-widget-content 
-.ui-state-highlight, 
-.ui-widget-header 
-.ui-state-highlight {
-	border: none;
-	background: $primary-color;
-	color: $white;
+.ui-widget-content .ui-state-highlight, 
+.ui-widget-header .ui-state-highlight {
+	border: none !important;
+	background: $primary-color !important;
+	color: $white !important;
+}
+
+.ui-state-active {
+	background: $secondary-color !important;
+	color: $white !important;
 }
 
 .ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
