@@ -25,12 +25,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8">
-						<section class="et-area-alert">
-							<div class="alert alert-warning alert-dismissible" role="alert">
-							  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							  Bạn vui lòng <a href="#" class="et-link-dark">Đăng nhập</a> để lấy thông tin hành khách hoặc điền vào form dưới đây. Nếu bạn chưa có tài khoản, đăng ký tại <a href="#" class="et-link-dark">đây</a>.
-							</div>
-						</section>
+						<div class="alert alert-warning alert-dismissible et-area-alert" role="alert">
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						  Bạn vui lòng <a href="#" class="et-link-dark">Đăng nhập</a> để lấy thông tin hành khách hoặc điền vào form dưới đây. Nếu bạn chưa có tài khoản, đăng ký tại <a href="#" class="et-link-dark">đây</a>.
+						</div>
 						<!-- End .et-area-alert -->
 
 
@@ -105,17 +103,17 @@
 													<div class="col-xs-6">
 														<div class="form-group">
 															<label class="et-form-label">Hành lý ký gửi lượt đi (HAN → SGN):</label>
-															<select class="form-control">
-																<option value="20kg - 0 VND">20kg - 0 VND</option>
+															<select class="form-control" data-booking-type="value-input" data-type="start-direction">
+																<option value="0">20kg - 0 VND</option>
 															</select>
 														</div>
 														<div class="form-group">
 															<label class="et-form-label">Hành lý ký gửi lượt về  (SGN → HAN):</label>
-															<select class="form-control">
-																<option value="0kg - 0 VND">0kg - 0 VND</option>
-																<option value="15kg - 154.000 VND">15kg - 154.000 VND</option>
-																<option value="20kg - 176.000 VND">20kg - 176.000 VND</option>
-																<option value="25kg - 242.000 VND">25kg - 242.000 VND</option>
+															<select class="form-control" data-booking-type="value-input" data-type="return-direction">
+																<option value="0">0kg - 0 VND</option>
+																<option value="154000">15kg - 154.000 VND</option>
+																<option value="176000">20kg - 176.000 VND</option>
+																<option value="242000">25kg - 242.000 VND</option>
 															</select>
 														</div>
 													</div>
@@ -156,17 +154,17 @@
 													<div class="col-xs-6">
 														<div class="form-group">
 															<label class="et-form-label">Hành lý ký gửi lượt đi (HAN → SGN):</label>
-															<select class="form-control">
+															<select class="form-control" data-booking-type="value-input" data-type="start-direction">
 																<option value="20kg - 0 VND">20kg - 0 VND</option>
 															</select>
 														</div>
 														<div class="form-group">
 															<label class="et-form-label">Hành lý ký gửi lượt về  (SGN → HAN):</label>
-															<select class="form-control">
-																<option value="0kg - 0 VND">0kg - 0 VND</option>
-																<option value="15kg - 154.000 VND">15kg - 154.000 VND</option>
-																<option value="20kg - 176.000 VND">20kg - 176.000 VND</option>
-																<option value="25kg - 242.000 VND">25kg - 242.000 VND</option>
+															<select class="form-control" data-booking-type="value-input" data-type="return-direction">
+																<option value="0">0kg - 0 VND</option>
+																<option value="154000">15kg - 154.000 VND</option>
+																<option value="176000">20kg - 176.000 VND</option>
+																<option value="242.000">25kg - 242.000 VND</option>
 															</select>
 														</div>
 													</div>
@@ -217,7 +215,7 @@
 										<p class="small">Chủ nhật - 01/10/2017</p>
 									</div>
 									<div>
-										<span class="et-text-heading-1 et-format-money">2650000</span>
+										<span class="et-text-heading-1" data-total="start-direction">0</span>
 									</div>
 								</div>
 							</div>
@@ -285,7 +283,7 @@
 										<p class="small">Chủ nhật - 08/10/2017</p>
 									</div>
 									<div>
-										<span class="et-text-heading-1 et-format-money">2220000</span>
+										<span class="et-text-heading-1" data-total="return-direction">0</span>
 									</div>
 								</div>
 							</div>
@@ -348,7 +346,7 @@
 						<div class="et-group-price-booking">
 							<div class="et-flexbox et-justify-between et-align-center">
 								<p class="et-text-heading-3 mb-0">Tổng giá vé 2 chiều:</p>
-								<span class="et-price-bigger et-format-money">5897000</span>
+								<span class="et-price-bigger" data-total="round-trip">0</span>
 							</div>
 							<p class="et-text-caption">(Giá vé đã bao gồm thuế, phụ phí và hành lý ký gửi)</p>
 						</div>
@@ -366,6 +364,61 @@
 		<script src="./vendor/accounting/accounting.min.js"></script>
 		<script src="./vendor/owl-carousel/owl.carousel.min.js"></script>
 		<script src="./js/main.js"></script>
+
+		<script>
+			/**
+			 * [renderPrice to html]
+			 * @param  {number} [price] [Price of way direction]
+			 * @param {object} [element] [where to render]
+			 */
+			function renderPrice(price, element) {
+				console.log(typeof price);
+				if (typeof price === 'number' && typeof element === 'object') {
+					var money = accounting.formatMoney(price, {
+						symbol: ' ₫',
+						format: '%v %s',
+						precision: 0,
+						decimal: ',',
+						thousand: '.'
+					});
+					if (money) {
+						$(element).text(money);
+					}
+				} else {
+					throw 'Wrong typeof price or element'
+				}
+			};
+
+			$(document).ready(function() {
+				var priceStartDirection = 5300000,
+						priceReturnDirection = 4440000;
+
+				// Render price to html when start
+				renderPrice(priceReturnDirection, $('[data-total="return-direction"]'));
+				renderPrice(priceStartDirection, $('[data-total="start-direction"]'));
+				renderPrice(priceStartDirection + priceReturnDirection, $('[data-total="round-trip"]'));
+
+				$('[data-booking-type]').on('change', function(e) {
+					var price = parseInt(this.value),
+							type = $(this).data('type');
+					if (type === 'return-direction') {
+						priceReturnDirection += price;
+						setTimeout(function() {
+							renderPrice(priceReturnDirection, $('[data-total="return-direction"]'));
+						});
+					} else if (type === 'start-direction') {
+						priceStartDirection += price;
+						setTimeout(function() {
+							renderPrice(priceStartDirection, $('[data-total="start-direction"]'));
+						});
+					} else {
+						throw 'Wrong type option'
+					}
+					renderPrice(priceStartDirection + priceReturnDirection, $('[data-total="round-trip"]'));
+					return false;
+				});
+			});
+		</script>
 
 	</body>
 </html>

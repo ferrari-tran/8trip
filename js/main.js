@@ -123,7 +123,7 @@ $(document).ready(function() {
 		var numberElms = $('.et-format-money');
 		$(numberElms).each(function(index, numberElm) {
 			var money = accounting.formatMoney($(numberElm).text(), {
-				symbol: '₫',
+				symbol: ' ₫',
 				format: '%v %s',
 				precision: 0,
 				decimal: ',',
