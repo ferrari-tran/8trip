@@ -19,9 +19,8 @@ $(document).ready(function() {
 	};
 
 	// Carousel
-	if (typeof $.owlCarousel !== undefined) {
+	if (typeof $.owlCarousel !== 'undefined') {
 		var owl = $('.et-filter-slider > div');
-
 		owl.owlCarousel({
 			autoWidth: true,
 			items: 1,
@@ -67,6 +66,10 @@ $(document).ready(function() {
 			open: function(event, ui) {
 				var dialog = event.target;
 				var item = $(dialog).find('.et-list-item');
+
+				console.log('self');
+				console.log(self);
+
 				$(item).click(function() {
 					var city = $(this).text(),
 							areaCode = $(this).data('area-code') ? $(this).data('area-code' ) : '';
@@ -77,10 +80,31 @@ $(document).ready(function() {
 						$(dialog).dialog('close');
 						self = undefined;
 					}
+					return false;
 				});
+
+				setTimeout(function() {
+					$(dialog).bind('clickoutside', function(e) {
+						var target = e.target;
+						console.log(target);
+						console.log('self 2');
+						console.log(self);
+						if (target !== self ) {
+							$(this).dialog('close');
+						}
+						return false;
+					});
+				}, 100);
 			}
 		});
 	});
+
+	// if ($('#et-citypicker-dialog').dialog('isOpen')) {
+	// 	$('#et-citypicker-dialog').bind('clickoutside', function(e) {
+	// 		console.log(e);
+	// 		$(this).dialog('close');
+	// 	});
+	// }
 
 	// Button reverse place choosen
 	$('.btn-reverse-control').click(function(e) {

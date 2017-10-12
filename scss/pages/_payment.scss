@@ -1,0 +1,30 @@
+.et-area-booked {
+	.et-booked-header {
+		line-height: 1.2;
+	}
+}
+.et-list-booked {
+	counter-reset: list;
+	> li {
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+		counter-increment: list;
+		> p::before {
+			content: counters(list, '.') '. '; 
+		}
+	}
+}
+
+.et-booked-detail {
+	padding-bottom: 10px;
+	&:not(:last-child) {
+		border-bottom: solid 1px $border-color;
+		margin-bottom: 20px;
+	}
+}
+
+.et-list-client {
+	padding-left: 16px;
+	margin-bottom: 0;
+}

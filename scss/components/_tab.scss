@@ -23,6 +23,7 @@
 		text-transform: uppercase;
 		border-top-left-radius: $border-radius-big;
 		border-top-right-radius: $border-radius-big;
+		margin-bottom: 0;
 		&:hover {
 			background: $white;
 		}
