@@ -19,39 +19,6 @@ $(document).ready(function() {
 		});
 	};
 
-	// Carousel
-	if (typeof $.owlCarousel !== 'undefined') {
-		var owl = $('.et-filter-slider > div');
-		owl.owlCarousel({
-			autoWidth: true,
-			items: 1,
-			margin: 0,
-			dots: false,
-			nav: true,
-			navText: ['<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
-								'<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'],
-			onInitialized: callback
-		});
-
-		var owlItem = $(owl).find('.owl-item');
-		$(owlItem).click(function() {
-			$(owlItem).find('.et-block').removeClass('active');
-			var self = this;
-			setTimeout(function() {
-				$(self).find('.et-block').addClass('active');
-				// Other event will be here
-			}, 10);
-		});
-
-		function callback(event) {
-			var currItem 	= $(event.target).find('.owl-item')[event.item.index];
-			$(currItem).find('.et-block').addClass('active');
-		}
-	} else {
-		console.log('error');
-	}
-	
-
 	// Citypicker
 	$('.et-city-picker').click(function() {
 		var self = this;
@@ -166,4 +133,34 @@ $(document).ready(function() {
 			}
 		});
 	}
+});
+
+// Carousel 
+$(document).ready(function() {
+	var owl = $('.et-filter-slider > div');
+		owl.owlCarousel({
+			autoWidth: true,
+			items: 1,
+			margin: 0,
+			dots: false,
+			nav: true,
+			navText: ['<img src="images/ic_arrow_prev.svg" height="20" class="et-arrow et-arrow-prev"/>',
+								'<img src="images/ic_arrow_next.svg" height="20" class="et-arrow et-arrow-next"/>'],
+			onInitialized: callback
+		});
+
+		var owlItem = $(owl).find('.owl-item');
+		$(owlItem).click(function() {
+			$(owlItem).find('.et-block').removeClass('active');
+			var self = this;
+			setTimeout(function() {
+				$(self).find('.et-block').addClass('active');
+				// Other event will be here
+			}, 10);
+		});
+
+		function callback(event) {
+			var currItem 	= $(event.target).find('.owl-item')[event.item.index];
+			$(currItem).find('.et-block').addClass('active');
+		}
 });
