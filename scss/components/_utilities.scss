@@ -375,7 +375,7 @@ select {
   display: inline-block;
   height: 20px;
   width: 31px;
-  background: #898989;
+  background: $border-color;
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.3s ease;
