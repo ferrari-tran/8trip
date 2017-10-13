@@ -1,0 +1,19 @@
+.dropdown-menu {
+	border: none;
+	@extend .et-shadow-500;
+	padding-top: 0;
+	padding-bottom: 0;
+	> li {
+		> a {
+			@extend .transition;
+			padding: 10px 16px;
+			&:hover {
+				background: $primary-color;
+				color: $white;
+			}
+		}
+		&.divider {
+			margin: 0;
+		}
+	}
+}

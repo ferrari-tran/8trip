@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	var dateToday = new Date();
 	// Datepicker
@@ -46,6 +47,8 @@ $(document).ready(function() {
 			var currItem 	= $(event.target).find('.owl-item')[event.item.index];
 			$(currItem).find('.et-block').addClass('active');
 		}
+	} else {
+		console.log('error');
 	}
 	
 
@@ -83,18 +86,15 @@ $(document).ready(function() {
 					return false;
 				});
 
-				setTimeout(function() {
-					$(dialog).bind('clickoutside', function(e) {
-						var target = e.target;
-						console.log(target);
-						console.log('self 2');
-						console.log(self);
-						if (target !== self ) {
-							$(this).dialog('close');
-						}
-						return false;
-					});
-				}, 100);
+				// setTimeout(function() {
+				// 	$(dialog).bind('clickoutside', function(e) {
+				// 		var target = e.target;
+				// 		if (target !== self ) {
+				// 			$(this).dialog('close');
+				// 		}
+				// 		return false;
+				// 	});
+				// }, 100);
 			}
 		});
 	});
