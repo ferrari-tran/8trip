@@ -9,6 +9,9 @@
 				right: 0;
 			}
 		}
+		&:nth-child(1) > a {
+			border-top-left-radius: $border-radius-normal;
+		}
 		&:nth-child(1) > a::before {
 			background-color: $primary-color;
 			border-top-left-radius: $border-radius-normal;

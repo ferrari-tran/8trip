@@ -43,7 +43,7 @@
 		padding: 20px 30px;
 		background: $white;
 		border-radius: $border-radius-big;
-		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
 		@extend .et-shadow-100;
 	}
 }
