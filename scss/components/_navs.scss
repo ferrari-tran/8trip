@@ -1,0 +1,80 @@
+.et-nav-rainbow {
+	> li {
+		+ li {
+			margin-top: 0;
+		}
+		&.active > a {
+			background: transparent;
+			&::after {
+				right: 0;
+			}
+		}
+		&:nth-child(1) > a::before {
+			background-color: $primary-color;
+			border-top-left-radius: $border-radius-normal;
+		}
+		&:nth-child(2) > a::before {
+			background-color: $secondary-color;
+		}
+		&:nth-child(3) > a::before {
+			background-color: $accent-color;
+		}
+		&:nth-child(4) > a::before {
+			background-color: $green;
+		}
+		&:nth-child(5) > a::before {
+			background-color: $text-color;
+		}
+		&:last-child > a::before {
+			border-bottom-left-radius: $border-radius-normal;
+		}
+		> a {
+			position: relative;
+			z-index: 0;
+			color: $white;
+			border-radius: 0;
+			background: transparent;
+			&::before {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				content: '';
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 12px 10px 0;
+				border-color: transparent #fff transparent transparent;
+				filter: box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.1));
+				top: 0;
+				bottom: 0;
+				right: -20px;
+				margin: auto 0;
+				z-index: 1;
+				@extend .transition;
+			}
+			.et-nav-title {
+				font-weight: $font-weight-bolder;
+				margin-bottom: 0;
+			}
+			.et-nav-describe {
+				font-size: 12px;
+			}
+			.et-nav-symbol {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

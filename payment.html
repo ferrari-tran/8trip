@@ -28,11 +28,249 @@
 						
 						<section class="et-area-payment">
 							<h4 class="et-text-heading-1">Thanh toán</h4>
-							form
+							
+							<div class="et-tab-payment">
+								<div class="et-col-nav">
+									<ul class="nav nav-pills nav-stacked et-nav-rainbow">
+
+
+									  <li role="presentation">
+										<a href="#et-tab-1" aria-controls="et-tab-1" role="tab" data-toggle="tab">
+											<p class="et-nav-title">Chuyển khoản</p>
+											<p class="et-nav-describe">Chuyển tiền tại quầy giao dịch hoặc qua internet banking, ATM</p>
+											<span class="et-nav-symbol"><img src="images/ic_mobile_payment.svg" alt="payment"></span>
+										</a>
+									  </li>
+
+									  <li role="presentation" class="active">
+										<a href="#et-tab-2" aria-controls="et-tab-2" role="tab" data-toggle="tab">
+											<p class="et-nav-title">Thẻ tín dụng</p>
+											<p class="et-nav-describe">Chuyển tiền tại quầy giao dịch hoặc qua internet banking, ATM</p>
+											<span class="et-nav-symbol"><img src="images/ic_credit_card.svg" alt="credit"></span>
+										</a>
+									  </li>
+
+									  <li role="presentation">
+										<a href="#et-tab-3" aria-controls="et-tab-3" role="tab" data-toggle="tab">
+											<p class="et-nav-title">Tại cửa hàng</p>
+											<p class="et-nav-describe">Thanh toán bằng tiền mặt trực tiếp tại cửa hàng đại lý</p>
+											<span class="et-nav-symbol"><img src="images/ic_cash_money.svg" alt="cash"></span>
+										</a>
+									  </li>
+
+									  <li role="presentation">
+										<a href="#et-tab-4" aria-controls="et-tab-4" role="tab" data-toggle="tab">
+											<p class="et-nav-title">Thanh toán trực tuyến</p>
+											<p class="et-nav-describe">Thanh toán bằng tiền mặt trực tiếp tại cửa hàng đại lý</p>
+											<span class="et-nav-symbol"><img src="images/ic_investment.svg" alt="investment"></span>
+										</a>
+									  </li>
+
+									  <li role="presentation">
+										<a href="#et-tab-5" aria-controls="et-tab-5" role="tab" data-toggle="tab">
+											<p class="et-nav-title">Bưu điện</p>
+											<p class="et-nav-describe">Thanh toán bằng tiền mặt trực tiếp tại cửa hàng đại lý</p>
+											<span class="et-nav-symbol"><img src="images/ic_truck.svg" alt="truck"></span>
+										</a>
+									  </li>
+									</ul>
+								</div>
+								<div class="et-col-content">
+									<div class="tab-content tab-content-rainbow">
+										<div class="tab-pane fade" role="tabpanel" id="et-tab-1">
+											<div class="et-group">
+												<h4 class="et-text-heading-1">Chuyển khoản</h4>
+												<p>Bạn có thể chuyển tiền mặt tại quầy giao dịch hoặc chuyển khoản qua Internet Banking và trạm ATM.</p>
+
+												<p class="et-text-heading-4">Lưu ý trước khi thanh toán:</p>
+												<div class="alert alert-info" role="alert">
+													<ul>
+														<li>Chưa áp dụng chuyển khoản qua ATM hoặc Internet Banking từ ngân hàng khác hệ thống.</li>
+														<li>Phí chuyển khoản sẽ do người chuyển trả.</li>
+													</ul>
+												</div>
+
+												<form class="et-form">
+													<p class="et-text-heading-4">Chọn ngân hàng:</p>
+
+													<ul class="list-group list-banks-select">
+														<li class="list-group-item">
+														  <div class="et-radio">
+														    <input id="1" type="radio" name="g" checked>
+														    <label for="1" class="et-form-label">VP bank</label>
+														    <img src="images/logo_vpbank.png" alt="1" class="pull-right">
+														  </div>
+														</li>
+														<li class="list-group-item">
+															<div class="et-radio">
+														    <input id="2" type="radio" name="g">
+														    <label for="2" class="et-form-label">Vietcombank</label>
+														    <img src="images/logo_vietcombank.png" alt="2" class="pull-right">
+														  </div>
+														</li>
+														<li class="list-group-item">
+															<div class="et-radio">
+														    <input id="3" type="radio" name="g">
+														    <label for="3" class="et-form-label">Viettin bank</label>
+														    <img src="images/logo_viettinbank.png" alt="3" class="pull-right">
+														  </div>
+														</li>
+													</ul>
+
+													<div class="form-group et-form-group-inline et-form-group-toggle">
+														<div data-target="input-code-1" class="btn-toggle">
+															<label class="et-switch switch-material mb-0">
+												        <input type="checkbox" class="switch-material-input is-hidden" id="switch-unchecked"/>
+												        <label for="switch-unchecked" class="switch-material-label"></label>
+												      </label>
+												    </div>
+												    <span class="et-text-bold">Nhập mã giảm giá</span>
+											      <div data-ref="input-code-1" style="display: none;">
+											      	<input type="text" class="form-control et-input-short">
+											      </div>
+													</div>
+
+													<hr>
+
+													<div class="et-group et-normal-margin-b">
+														<h4 class="et-text-heading-1">Chi tiết giá</h4>
+														<div>
+															<table class="table table-no-border et-table-detail-between">
+																<tbody>
+																	<tr>
+																		<td>Vé người lớn cơ bản <span class="et-text-heading-4">(x2)</span></td>
+																		<td class="et-text-heading-4"><span class="et-format-money">2930000</span></td>
+																	</tr>
+																	<tr>
+																		<td>Phụ phí <span class="et-text-heading-4">(x2)</span></td>
+																		<td class="et-text-heading-4"><span class="et-format-money">0</span></td>
+																	</tr>
+																	<tr>
+																		<td>Thuế <span class="et-text-heading-4">(x2)</span></td>
+																		<td class="et-text-heading-4"><span class="et-format-money">102000</span></td>
+																	</tr>
+																</tbody>
+															</table>
+															<div class="et-devider-dashed"></div>
+															<table class="table table-no-border et-table-detail-between">
+																<tbody>
+																	<tr>
+																		<td>Tổng:</td>
+																		<td class="et-text-heading-2 et-text-highlight-3"><span class="et-format-money">5860000</span></td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+
+													<p class="text-right et-small-margin-y">Bằng việc nhấn thanh toán, bạn đồng ý <a href="#" class="et-link-dark">Điều khoản</a> và <a href="#" class="et-link-dark">Điều kiện</a>,<br><a href="#" class="et-link-dark">Chính sách quyền riêng tư</a>.
+													</p>
+													<p class="text-right">
+														<button class="btn btn-accent">Thanh toán</button>
+													</p>
+
+												</form>
+
+											</div>
+										</div>
+										<div role="tabpanel" class="tab-pane fade in active" id="et-tab-2">
+											<form class="et-form">
+												<div class="et-group">
+													<h4 class="et-text-heading-1">Thẻ tín dụng</h4>
+													<div class="row">
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="et-form-label">Số thẻ tín dụng:</label>
+																<input type="text" class="form-control" placeholder="16 chữ số viết liền">
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="et-form-label">Tên in trên thẻ:</label>
+																<input type="text" class="form-control" placeholder="Tên không dấu">
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="et-form-label">Có hiệu lực đến:</label>
+																<input type="text" class="form-control" placeholder="MM/YY">
+															</div>
+														</div>
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="et-form-label">CVV: <span><img src="images/ic_info.svg" alt="info"></span></label>
+																<input type="text" class="form-control" placeholder="3 chữ số cuối sau thẻ">
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="form-group et-form-group-inline et-form-group-toggle">
+																<div data-target="input-code-1" class="btn-toggle">
+																	<label class="et-switch switch-material mb-0">
+														        <input type="checkbox" class="switch-material-input is-hidden" id="switch-unchecked"/>
+														        <label for="switch-unchecked" class="switch-material-label"></label>
+														      </label>
+														    </div>
+														    <span class="et-text-bold">Nhập mã giảm giá</span>
+													      <div data-ref="input-code-1" style="display: none;">
+													      	<input type="text" class="form-control et-input-short">
+													      </div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<hr>
+
+												<div class="et-group et-normal-margin-b">
+													<h4 class="et-text-heading-1">Chi tiết giá</h4>
+													<div>
+														<table class="table table-no-border et-table-detail-between">
+															<tbody>
+																<tr>
+																	<td>Vé người lớn cơ bản <span class="et-text-heading-4">(x2)</span></td>
+																	<td class="et-text-heading-4"><span class="et-format-money">2930000</span></td>
+																</tr>
+																<tr>
+																	<td>Phụ phí <span class="et-text-heading-4">(x2)</span></td>
+																	<td class="et-text-heading-4"><span class="et-format-money">0</span></td>
+																</tr>
+																<tr>
+																	<td>Thuế <span class="et-text-heading-4">(x2)</span></td>
+																	<td class="et-text-heading-4"><span class="et-format-money">102000</span></td>
+																</tr>
+															</tbody>
+														</table>
+														<div class="et-devider-dashed"></div>
+														<table class="table table-no-border et-table-detail-between">
+															<tbody>
+																<tr>
+																	<td>Tổng:</td>
+																	<td class="et-text-heading-2 et-text-highlight-3"><span class="et-format-money">5860000</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+
+												<p class="text-right et-small-margin-y">Bằng việc nhấn thanh toán, bạn đồng ý <a href="#" class="et-link-dark">Điều khoản</a> và <a href="#" class="et-link-dark">Điều kiện</a>,<br><a href="#" class="et-link-dark">Chính sách quyền riêng tư</a>.
+												</p>
+												<p class="text-right">
+													<button class="btn btn-accent">Thanh toán</button>
+												</p>
+											</form>
+										</div>
+								  </div>
+								</div>
+							</div>
 						</section>
 
 
 					</div>
+
+
+
 					<div class="col-xs-4">
 						
 						<section class="et-area-booked">

@@ -19,6 +19,20 @@
 	}
 }
 
+.et-form-group-inline {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	> * {
+		margin-bottom: 0;
+		margin-right: $small-spacing-item;
+	}
+}
+
+.et-input-short {
+	width: 100px;
+}
+
 .form-group {
 	.form-control {
 		box-shadow: none;

@@ -129,6 +129,11 @@ $(document).ready(function() {
 		e.preventDefault();
 		var target = $(this).data('target');
 		$('[data-ref="' + target + '"]').slideToggle();
+
+		var label = e.target;
+		if ($(label).length > 0) {
+			$(label).prev().toggleClass('checked');
+		}
 	});
 
 	// Toggle choose way

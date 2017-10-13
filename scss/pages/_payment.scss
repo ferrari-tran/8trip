@@ -1,4 +1,5 @@
 .et-area-booked {
+	margin-top: 52px;
 	.et-booked-header {
 		line-height: 1.2;
 	}
@@ -27,4 +28,36 @@
 .et-list-client {
 	padding-left: 16px;
 	margin-bottom: 0;
+}
+
+.et-tab-payment {
+	display: flex;
+	.et-col-nav {
+		flex: 0 0 33.33333333333%;
+	}
+
+	.et-col-content {
+		flex: 0 0 auto;
+		width: 100%;
+		max-width: 66.66666666667%;
+		padding: 20px 30px;
+		background: $white;
+		border-radius: $border-radius-big;
+		border-bottom-left-radius: 0;
+		@extend .et-shadow-100;
+	}
+}
+
+.list-banks-select {
+	.list-group-item {
+		.et-radio {
+			margin: 0;
+			label {
+				display: inline-block;
+			}
+			img {
+				height: 20px;
+			}
+		}
+	}
 }
