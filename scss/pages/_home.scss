@@ -68,6 +68,18 @@
 /**
  * Navbar top
  */
+.header-page {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background: $secondary-color;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #f56353, #fac62a);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f56353, #fac62a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	min-height: 300px;
+	img {
+		margin: 0 auto;
+	}
+}
 .navbar-right {
 	float: right!important;
     margin-right: -15px;
@@ -75,6 +87,7 @@
 .et-navbar-top {
 	background: $white;
 	@extend .et-shadow-100;
+	margin-bottom: 0;
 	.navbar-header {
 		display: inline-block;
 		.navbar-brand {
