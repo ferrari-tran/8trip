@@ -99,14 +99,22 @@
 													</div>
 
 													<div class="col-xs-4">
-														<div class="form-group">
-															<label class="et-form-label">
-																<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
-															</label>
-															<select class="form-control">
-															  <option value="Phổ thông">Economy - Phổ thông</option>
-															  <option value="Thương gia">Business - Thương gia</option>
-															</select>
+														<div class="et-client-group">
+															<div class="form-group">
+																<label class="et-form-label">
+																	<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
+																</label>
+																<select class="form-control">
+																  <option value="Phổ thông">Eco - Phổ thông</option>
+																  <option value="Thương gia">Business - Thương gia</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<div class="et-checkbox et-normal-margin-t">
+																  <input id="i1" type="checkbox" checked>
+																  <label for="i1" class="et-form-label">Khứ hồi</label>
+																</div>
+															</div>
 														</div>
 														<div class="et-client-group">
 															<div class="form-group">
@@ -152,18 +160,7 @@
 													</div>
 
 												</div>
-
-												<div class="row">
-													<div class="col-xs-12">
-														 <div class="checkbox">
-													    <label class="et-text-bold">
-													      <input type="checkbox"> Khứ hồi
-													    </label>
-													  </div>
-													</div>
-												</div>
 												<div class="text-center">
-													<!-- <button class="btn btn-default" type="reset">Đặt lại</button> -->
 													<button class="btn btn-secondary mx-auto">Tìm chuyến bay</button>
 												</div>
 											</form>
@@ -267,7 +264,7 @@
 						<li class="et-list-title">Quốc tế</li>
 						<li class="et-list-notice">
 							<div class="form-group form-group-sm">
-								<label class="small">Hãy nhập tên thành phố hoặc mã sân bay</label>
+								<label class="small et-form-label">Hãy nhập tên thành phố hoặc mã sân bay</label>
 								<input type="text" class="form-control" placeholder="Hà Nội (HAN)">
 							</div>
 						</li>
@@ -292,6 +289,7 @@
 		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="./vendor/accounting/accounting.min.js"></script>
 		<script src="./vendor/jquery.ba-outside-events.min.js"></script>
+		<script src="./vendor/owl-carousel/owl.carousel.min.js"></script>
 		<script src="./js/main.js"></script>
 
 	</body>

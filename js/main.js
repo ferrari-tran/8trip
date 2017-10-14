@@ -37,9 +37,6 @@ $(document).ready(function() {
 				var dialog = event.target;
 				var item = $(dialog).find('.et-list-item');
 
-				console.log('self');
-				console.log(self);
-
 				$(item).click(function() {
 					var city = $(this).text(),
 							areaCode = $(this).data('area-code') ? $(this).data('area-code' ) : '';
@@ -138,7 +135,7 @@ $(document).ready(function() {
 // Carousel 
 $(document).ready(function() {
 	var owl = $('.et-filter-slider > div');
-		owl.owlCarousel({
+		$(owl).owlCarousel({
 			autoWidth: true,
 			items: 1,
 			margin: 0,
