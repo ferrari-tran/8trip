@@ -3,11 +3,12 @@
 	font-weight: $font-weight-bolder;
 	height: 40px;
 	padding: 10px 24px;
+	&.btn-small {
+		height: 36px;
+		padding: 8px 16px;
+	}
 }
-.btn-small {
-	height: 36px;
-	padding: 8px 16px;
-}
+
 .btn-default {
 	background: $gray;
 	color: $text-color;

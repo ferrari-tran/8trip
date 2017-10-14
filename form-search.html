@@ -10,6 +10,7 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="./vendor/select2/select2.min.css">
 		<link rel="stylesheet" href="css/style.min.css">
 
 		<!--[if lt IE 9]>
@@ -265,7 +266,15 @@
 						<li class="et-list-notice">
 							<div class="form-group form-group-sm">
 								<label class="small et-form-label">Hãy nhập tên thành phố hoặc mã sân bay</label>
-								<input type="text" class="form-control" placeholder="Hà Nội (HAN)">
+								<select class="et-search-select" name="state" style="width: 100%">
+									<option value="">Chọn thành phố...</option>
+									<option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+									<option value="Hồ Chí Minh (SGN)">Hồ Chí Minh (SGN)</option>
+									<option value="Đà Nẵng (DAN)">Đà Nẵng (DAN)</option>
+								</select>
+								<p class="text-right et-small-margin-t ">
+									<button class="btn btn-small btn-secondary">Lựa chọn</button>
+								</p>
 							</div>
 						</li>
 					</ul>
@@ -288,8 +297,8 @@
 		<script src="./vendor/bootstrap/bootstrap.min.js"></script>
 		<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="./vendor/accounting/accounting.min.js"></script>
-		<script src="./vendor/jquery.ba-outside-events.min.js"></script>
 		<script src="./vendor/owl-carousel/owl.carousel.min.js"></script>
+		<script src="./vendor/select2/select2.min.js"></script>
 		<script src="./js/main.js"></script>
 
 	</body>

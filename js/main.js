@@ -36,6 +36,7 @@ $(document).ready(function() {
 			open: function(event, ui) {
 				var dialog = event.target;
 				var item = $(dialog).find('.et-list-item');
+				var itemSelect = $(dialog).find('.et-search-select');
 
 				$(item).click(function() {
 					var city = $(this).text(),
@@ -50,25 +51,26 @@ $(document).ready(function() {
 					return false;
 				});
 
-				// setTimeout(function() {
-				// 	$(dialog).bind('clickoutside', function(e) {
-				// 		var target = e.target;
-				// 		if (target !== self ) {
-				// 			$(this).dialog('close');
-				// 		}
-				// 		return false;
-				// 	});
-				// }, 100);
+				$(itemSelect).on('change', function(e) {
+					var value = $(this).val();
+					if (value) {
+						$(self).val(value);
+						setTimeout(function() {
+							$(itemSelect).val('').trigger('change');
+							self = undefined;
+							$(dialog).dialog('close');
+						}, 300);
+					}
+				});
 			}
 		});
 	});
 
-	// if ($('#et-citypicker-dialog').dialog('isOpen')) {
-	// 	$('#et-citypicker-dialog').bind('clickoutside', function(e) {
-	// 		console.log(e);
-	// 		$(this).dialog('close');
-	// 	});
-	// }
+	// Select seach country
+	$('.et-search-select').select2({
+		placeholder: 'Lựa chọn thành phố',
+		width: 'resolve'
+	});
 
 	// Button reverse place choosen
 	$('.btn-reverse-control').click(function(e) {

@@ -27,6 +27,9 @@
 select {
 	cursor: pointer;
 }
+.et-fullwidth {
+	width: 100% !important;
+}
 /**
  * Alert
  */
@@ -87,6 +90,9 @@ select {
 .et-small-margin-y {
 	margin-top: $small-spacing-item;
 	margin-bottom: $small-spacing-item;
+}
+.et-small-margin-t {
+	margin-top: $small-spacing-item;
 }
 .et-small-margin-b {
 	margin-bottom: $small-spacing-item;
