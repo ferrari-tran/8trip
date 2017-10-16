@@ -115,6 +115,20 @@ $(document).ready(function() {
 	});
 });
 
+/**
+ * [toggleActiveChooseTicket description]
+ * @param  {[type]} formCurrentActive [.et-result-item] col1
+ * @param  {[type]} formTargetActive  [.et-result-item] col2
+ */
+function toggleActiveChooseTicket(formCurrentActive, formTargetActive) {
+	if ( !$(formCurrentActive).hasClass('booked, fluid') && !$(formTargetActive).hasClass('booked, fluid')) {
+		$(formCurrentActive).toggleClass('active');
+		$(formTargetActive).toggleClass('active');
+	} else {
+		throw '1 trong 2 form chứa class booked hoặc fluid'
+	}
+}
+
 $(document).ready(function() {
 	// Format money
 	if (typeof accounting !== undefined) {
