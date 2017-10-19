@@ -177,3 +177,12 @@ $(document).ready(function() {
 			$(currItem).find('.et-block').addClass('active');
 		}
 });
+
+// Login/Signin
+$(document).ready(function() {
+	$('.et-btn-log').click(function(e) {
+		e.preventDefault();
+		var logModal = $('#modal-sign');
+		$(logModal).modal();
+	});
+});
