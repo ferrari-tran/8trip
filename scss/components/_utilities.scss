@@ -77,6 +77,10 @@ select {
 /**
  * Sizing
  */
+.et-section-padding {
+	padding-top: $big-spacing-item;
+	padding-bottom: $big-spacing-item;
+}
 .et-normal-padding {
 	padding: $normal-padding;
 }
@@ -133,6 +137,10 @@ select {
 // Shadow slow blur
 .et-shadow-100 {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.et-shadow-300 {
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 // Shadow hard blur
@@ -278,6 +286,13 @@ select {
 		}
 	}
 }
+.et-title-style-3 {
+	color: $text-color;
+	font-size: 32px;
+	text-transform: uppercase;
+	font-weight: $font-weight-bold;
+	margin-bottom: 30px;
+}
 /**
  * List
  */
@@ -357,7 +372,7 @@ select {
 	&.et-justify-between {
 		justify-content: space-between;
 	}
-	&.et-align-item {
+	&.et-align-item, &.et-align-middle {
 		align-items: center;
 	}
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=vietnamese');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=vietnamese');
 @import 'mixin';
 @import 'variables';
 @import 'common';
@@ -15,6 +15,7 @@
 @import 'components/panel';
 @import 'components/navs';
 @import 'components/dropdown';
+@import 'components/views';
 
 /* pages */
 @import 'pages/form-search';
