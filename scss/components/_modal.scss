@@ -2,6 +2,8 @@
 	.modal-header {
 		border-bottom: none;
 		padding: 15px 30px;
+		border-top-left-radius: $border-radius-normal;
+		border-top-right-radius: $border-radius-normal;
 	}
 	.modal-body {
 		padding: 15px 30px;

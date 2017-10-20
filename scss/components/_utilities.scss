@@ -31,6 +31,13 @@ select {
 	width: 100% !important;
 }
 /**
+ * Background
+ */
+.et-bg-primary-linear {
+	background: $primary-color;
+	background-image: linear-gradient(45deg, #1A92FB 0%, $primary-color 100%);
+}
+/**
  * Alert
  */
 .alert {
@@ -80,6 +87,10 @@ select {
 .et-normal-padding-y {
 	padding-top: $normal-padding;
 	padding-bottom: $normal-padding;
+}
+.et-normal-margin-y {
+	margin-top: $normal-padding;
+	margin-bottom: $normal-padding;
 }
 .et-normal-margin-t {
 	margin-top: $normal-padding;

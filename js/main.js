@@ -77,7 +77,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		var target1 = $(e.target).data('target-1'),
 				target2 = $(e.target).data('target-2');
-		
+
 		var value1 = $('[data-ref="' + target1 + '"]').val(),
 				value2 = $('[data-ref="' + target2 + '"]').val();
 
@@ -100,6 +100,20 @@ $(document).ready(function() {
 		if ($(label).length > 0) {
 			$(label).prev().toggleClass('checked');
 		}
+	});
+
+	// Link switch 2 target
+	$('.et-link-switch').click(function(e) {
+		e.preventDefault();
+		var formShow = $(e.target).data('show');
+		var formHide = $(e.target).data('hide');
+		// $('[data-ref="'+ formHide + '"]').fadeToggle('300');
+		// setTimeout(function() {
+		// 	$('[data-ref="'+ formShow + '"]').fadeToggle('300');
+		// }, 200);
+		$('[data-ref="'+ formHide + '"]').toggle();
+		$('[data-ref="'+ formShow + '"]').toggle();
+		return false;
 	});
 
 	// Toggle choose way

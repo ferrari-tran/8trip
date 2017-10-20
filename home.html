@@ -57,32 +57,89 @@
 				</div>
 			</nav>
 
-			<section class="modal fade" id="modal-sign" role="dialog" tabindex="-1">
+			<section class="modal fade et-modal et-modal-sign" id="modal-sign" role="dialog" tabindex="-1">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-xs-4">
-									<div class="row">
-										<img src="" alt="">
+						<article class="et-form-login" data-ref="et-form-login">
+							<div class="modal-header et-modal-header-symbol et-bg-primary-linear">
+								<div>
+									<span class="et-account-symbol"></span>
+									<p class="et-form-title">Đăng nhập</p>
+								</div>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-xs-10 col-xs-offset-1">
+										<form class="et-form">
+											<div class="form-group">
+												<label class="et-form-label">Tài khoản</label>
+												<input type="text" class="form-control" placeholder="Email hoặc số điện thoại">
+											</div>
+											<div class="form-group">
+												<label class="et-form-label">Mật khẩu</label>
+												<input type="password" class="form-control" placeholder="Nhập mật khẩu của bạn">
+											</div>
+											<div class="form-group et-flexbox et-justify-between">
+												<div class="et-checkbox">
+												  <input id="save-pass" type="checkbox">
+												  <label for="save-pass" class="et-form-label">Lưu mật khẩu</label>
+												</div>
+												<a href="#" class="et-link-dark">Quên mật khẩu?</a>
+											</div>
+											<button class="btn btn-primary btn-block">Đăng nhập</button>
+										</form>
+
+										<div class="et-normal-margin-y text-center">
+											Nếu bạn chưa có tài khoản, đăng ký tại <a href="#" class="et-link-dark et-link-switch" data-show="et-form-signin" data-hide="et-form-login">đây</a>
+										</div>
 									</div>
 								</div>
-								<div class="col-xs-7">
-									<form class="et-form">
-										<h2 class="et-text-heading-2">Đăng nhập/Đăng ký</h2>
-										<div class="form-group">
-											<label class="et-form-label">Tài khoản</label>
-											<input type="text" class="form-control" placeholder="Email hoặc tên tài khoản">
+							</div>
+						</article>
+						<!-- End .et-form-login -->
+
+						<article class="et-form-signin" style="display: none;" data-ref="et-form-signin">
+							<div class="modal-header et-modal-header-symbol et-bg-primary-linear">
+								<div>
+									<span class="et-account-symbol"></span>
+									<p class="et-form-title">Đăng ký</p>
+								</div>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-xs-10 col-xs-offset-1">
+										<form class="et-form">
+											<div class="form-group">
+												<label class="et-form-label">Tài khoản</label>
+												<input type="text" class="form-control" placeholder="Email hoặc số điện thoại">
+											</div>
+											<div class="form-group">
+												<label class="et-form-label">Mật khẩu</label>
+												<input type="password" class="form-control" placeholder="Nhập mật khẩu của bạn">
+											</div>
+											<div class="form-group">
+												<label class="et-form-label">Nhập lại mật khẩu</label>
+												<input type="password" class="form-control" placeholder="Nhập lại mật khẩu của bạn">
+											</div>
+											<div class="form-group et-flexbox et-justify-between">
+												<div class="et-checkbox">
+												  <input id="accept-rule" type="checkbox">
+												  <label for="accept-rule" class="et-form-label">Tôi đồng ý với các điều khoản...</label>
+												</div>
+											</div>
+											<button class="btn btn-primary btn-block">Đăng ký</button>
+										</form>
+
+										<div class="et-normal-margin-y text-center">
+											Nếu bạn đã có tài khoản, đăng nhập tại <a href="#" class="et-link-dark et-link-switch" data-hide="et-form-signin" data-show="et-form-login">đây</a>
 										</div>
-										<div class="form-group">
-											<label class="et-form-label">Mật khẩu</label>
-											<input type="password" class="form-control" placeholder="Nhập mật khẩu của bạn">
-										</div>
-										<button class="btn btn-primary">Đăng nhập</button>
-									</form>
+									</div>
 								</div>
 							</div>
-						</div>
+						</article>
+						<!-- End .et-form-signin -->
 					</div>
 				</div>
 			</section>
@@ -90,11 +147,215 @@
 
 			<header class="header-page">
 				<!-- Nếu có banner thì chèn đoạn img này vào, không có thì background mặc định -->
-				<!-- <img src="images/banner-min.jpg" alt="banner" class="img-fluid"> -->
+				<img src="images/banner_trip.jpg" alt="banner" class="img-responsive">
 			</header>
 			<!-- End .header-page -->
 
 			<main class="main-content">
+				<section class="et-section-search">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-10 col-lg-offset-1">
+								<section>
+
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs et-nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#tab-ticket" aria-controls="tab-ticket" role="tab" data-toggle="tab">Vé máy bay</a></li>
+										<li role="presentation"><a href="#tab-tour" aria-controls="tab-tour" role="tab" data-toggle="tab">Tour</a></li>
+										<li role="presentation"><a href="http://khachsan.8trip.vn/" target="_blank">Khách sạn</a></li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content et-tab-content et-shadow-500">
+
+										<!-- Ticket -->
+										<div role="tabpanel" class="tab-pane active" id="tab-ticket">
+											<div class="et-normal-padding">
+												<div class="et-tab-pane-i">
+													<form class="et-form">
+														<div class="row">
+
+															<div class="col-xs-4">
+																<article class="et-place-group et-reverse-group">
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_checkin.svg" alt="place">Điểm đi</label>
+																		<input
+																			type="text"
+																			class="form-control et-city-picker"
+																			data-ref="start-place"
+																			placeholder="Lựa chọn điểm đi" />
+																	</div>
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_checkin.svg" alt="place">Điểm đến</label>
+																		<input
+																			type="text"
+																			class="form-control et-city-picker"
+																			placeholder="Lựa chọn điểm đến"
+																			data-ref="end-place" />
+																	</div>
+																	<div class="et-reverse-control">
+																		<button
+																			class="btn-reverse-control"
+																			data-target-1="start-place"
+																			data-target-2="end-place"
+																		></button>
+																	</div>
+																</article>
+															</div>
+
+															<div class="col-xs-4">
+																<article class="et-time-group">
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_calendar.svg" alt="place">Ngày đi</label>
+																		<input
+																			type="text"
+																			class="form-control et-datepicker"
+																			placeholder="dd/mm/yy"
+																			data-date="day-out"
+																		>
+																	</div>
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_calendar.svg" alt="place">Ngày về</label>
+																		<input
+																			type="text"
+																			class="form-control et-datepicker"
+																			placeholder="dd/mm/yy"
+																			data-date="day-on"
+																		>
+																	</div>
+																</article>
+															</div>
+
+															<div class="col-xs-4">
+																<div class="et-client-group">
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_airplane_seat.svg" alt="place"> Hạng ghế
+																		</label>
+																		<select class="form-control">
+																		  <option value="Phổ thông">Eco - Phổ thông</option>
+																		  <option value="Thương gia">Business - Thương gia</option>
+																		</select>
+																	</div>
+																	<div class="form-group">
+																		<div class="et-checkbox et-normal-margin-t">
+																		  <input id="i1" type="checkbox" checked>
+																		  <label for="i1" class="et-form-label">Khứ hồi</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="et-client-group">
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_user.svg" alt="place"> Người lớn
+																		</label>
+																		<select class="form-control">
+																		  <option value="1">1</option>
+																		  <option value="2">2</option>
+																		  <option value="3">3</option>
+																		  <option value="4">4</option>
+																		  <option value="5">5</option>
+																		  <option value="6">6</option>
+																		  <option value="7">7</option>
+																		</select>
+																	</div>
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_child.svg" alt="place"> Trẻ em
+																		</label>
+																		<select class="form-control">
+																			<option value="1">0</option>
+																		  <option value="1">1</option>
+																		  <option value="2">2</option>
+																		  <option value="3">3</option>
+																		  <option value="4">4</option>
+																		  <option value="5">5</option>
+																		  <option value="6">6</option>
+																		</select>
+																	</div>
+																	<div class="form-group">
+																		<label class="et-form-label">
+																			<img src="./images/ic_baby_transport.svg" alt="place"> Em bé
+																		</label>
+																		<select class="form-control">
+																			<option value="1">0</option>
+																		  <option value="1">1</option>
+																		  <option value="2">2</option>
+																		  <option value="3">3</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+
+														</div>
+														<div class="text-center">
+															<button class="btn btn-secondary mx-auto">Tìm chuyến bay</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+
+										<!-- Tour -->
+										<div role="tabpanel" class="tab-pane" id="tab-tour">
+											<div class="et-normal-padding">
+												<div class="et-tab-pane-i">
+													<form class="et-form et-form-inline">
+														<div class="row">
+
+															<div class="col-xs-5">
+																<div class="form-group">
+																	<label class="et-form-label">
+																		<img src="./images/ic_checkin.svg" alt="place"> Địa điểm
+																	</label>
+																	<select class="form-control">
+																		<option value="">Chọn thành phố</option>
+																		<option value="Hawaii">Hawaii</option>
+																		<option value="California">California</option>
+																		<option value="Singapore">Singapore</option>
+																		<option value="HongKong">HongKong</option>
+																	</select>
+																</div>
+															</div>
+
+															<div class="col-xs-5">
+																<div class="form-group">
+																	<label class="et-form-label">
+																		<img src="./images/ic_calendar.svg" alt="place"> Ngày khởi hành
+																	</label>
+																	<input 
+																		type="text" 
+																		class="form-control et-datepicker"
+																		data-date="day-on"
+																		placeholder="dd/mm/yy">
+																</div>
+															</div>
+
+															<div class="col-xs-2">
+																<div class="et-button-group">
+																	<button class="btn btn-block btn-secondary">Tìm kiếm</button>
+																</div>
+															</div>
+
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End .et-section-search -->
+
 				<section class="et-section-tour">
 					tour here
 				</section>
@@ -213,6 +474,73 @@
 				</div>
 			</footer>
 			<!-- End .footer-page -->
+
+			<section id="et-citypicker-dialog" class="et-citypicker-dialog" title="Lựa chọn địa điểm">
+				<div class="et-citypicker-dialog-i">
+					<div class="et-dialog-column">
+						<ul class="et-list">
+							<li class="et-list-title">Miền Bắc</li>
+							<li class="et-list-item" data-area-code="HAN">Hà Nội</li>
+							<li class="et-list-item" data-area-code="">Vinh</li>
+							<li class="et-list-item" data-area-code="">Hải Phòng</li>
+						</ul>
+						<ul class="et-list">
+							<li class="et-list-title">Miền Trung</li>
+							<li class="et-list-item" data-area-code="">Thanh Hoá</li>
+							<li class="et-list-item" data-area-code="">Đà Nẵng</li>
+							<li class="et-list-item" data-area-code="">Huế</li>
+							<li class="et-list-item" data-area-code="">Đồng Hới</li>
+							<li class="et-list-item" data-area-code="">Tuy Hoà</li>
+							<li class="et-list-item" data-area-code="">Chu Lai</li>
+							<li class="et-list-item" data-area-code="">Pleiku</li>
+						</ul>
+					</div>
+					<div class="et-dialog-column">
+						<ul class="et-list">
+							<li class="et-list-title">Miền Nam</li>
+							<li class="et-list-item" data-area-code="SGN">Hồ Chí Minh</li>
+							<li class="et-list-item" data-area-code="">Nha Trang</li>
+							<li class="et-list-item" data-area-code="">Đà Lạt</li>
+							<li class="et-list-item" data-area-code="">Phú Quốc</li>
+							<li class="et-list-item" data-area-code="">Cần Thơ</li>
+							<li class="et-list-item" data-area-code="">Côn Đảo</li>
+							<li class="et-list-item" data-area-code="">Rạch Giá</li>
+							<li class="et-list-item" data-area-code="">Cà Mau</li>
+							<li class="et-list-item" data-area-code="">Buôn Ma Thuột</li>
+							<li class="et-list-item" data-area-code="">Quy Nhơn</li>
+						</ul>
+					</div>
+					<div class="et-dialog-column">
+						<ul class="et-list no-padding">
+							<li class="et-list-title">Quốc tế</li>
+							<li class="et-list-notice">
+								<div class="form-group form-group-sm">
+									<label class="small et-form-label">Hãy nhập tên thành phố hoặc mã sân bay</label>
+									<select class="et-search-select" name="state" style="width: 100%">
+										<option value="">Chọn thành phố...</option>
+										<option value="Hà Nội (HAN)">Hà Nội (HAN)</option>
+										<option value="Hồ Chí Minh (SGN)">Hồ Chí Minh (SGN)</option>
+										<option value="Đà Nẵng (DAN)">Đà Nẵng (DAN)</option>
+									</select>
+									<p class="text-right et-small-margin-t ">
+										<button class="btn btn-small btn-secondary">Lựa chọn</button>
+									</p>
+								</div>
+							</li>
+						</ul>
+						<ul class="et-list">
+							<li class="et-list-title">Điểm đến phổ biến</li>
+							<li class="et-list-item">Bangkok</li>
+							<li class="et-list-item">Singapore</li>
+							<li class="et-list-item">Kuala Lumpur</li>
+							<li class="et-list-item">Tokyo</li>
+							<li class="et-list-item">Seoul</li>
+							<li class="et-list-item">Quảng Châu</li>
+							<li class="et-list-item">Hong Kong</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 		</div>
 
 		<!-- Scripts -->

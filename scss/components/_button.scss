@@ -69,3 +69,18 @@
 		color: $white;
 	}
 }
+
+// Symbol
+.et-account-symbol {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: solid 2px $white;
+	background-image: url('../images/ic_user_white.svg');
+	background-repeat: no-repeat;
+	background-size: 30px auto;
+	background-position: center;
+}
