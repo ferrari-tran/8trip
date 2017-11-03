@@ -12,6 +12,8 @@
 			height: 270px;
 			border-radius: $border-radius-big;
 			margin-bottom: $small-spacing-item;
+			background-size: cover;
+			background-position: center;
 			@extend .et-shadow-300;
 			@extend .transition;
 			@include breakpoint(1200, min) {
