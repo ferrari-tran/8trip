@@ -213,8 +213,10 @@ $.fn.imgBg = function() {
 };
 
 $(document).ready(function() {
-	var img = $('.img-bg');
-	if (img.length > 0) {
-		$(img).imgBg();
+	var imgs = $('.img-bg');
+	if (imgs.length > 0) {
+		$(imgs).each(function(index, img) {
+			$(img).imgBg();
+		});
 	}
 });

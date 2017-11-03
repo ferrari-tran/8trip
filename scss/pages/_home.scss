@@ -237,13 +237,6 @@
   }
 }
 
-.carousel {
-	&:hover .carousel-control {
-		opacity: 1;
-		transition: all 0.5s ease-in-out;
-	}
-}
-
 .carousel-control {
 	width: 100px;
 	opacity: 0;
@@ -253,5 +246,12 @@
 	> img {
 		width: 20px;
 		height: auto;
+	}
+}
+
+.carousel {
+	&:hover .carousel-control {
+		opacity: 1;
+		transition: all 0.5s ease-in-out;
 	}
 }
