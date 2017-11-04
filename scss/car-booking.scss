@@ -1,0 +1,318 @@
+@import                 'mixin';
+
+$text-color:            #fff;
+$text-dark:             #212121;
+$border-color:          #fff;
+$border-color-dark:     #95989A;
+$class-name:            'et';
+$primary-color:         #00BAFB;
+$secondary-color:       #FFCD03;
+$border-radius:         3px;
+$border-radius-large:   10px;
+$spacing-large:         50px;
+$spacing-medium:        30px;
+$spacing-normal:        22px;
+$spacing-small:         10px;
+$spacing-extra-small:   5px;
+$height-control:        40px;
+
+body {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $primary-color center;
+  background-size: cover;
+  background-image: url('../images/bg_car_booking-min.jpg');
+}
+
+.wrapper {
+  padding: 50px 0;
+	@include breakpoint(959, max) {
+		width: fit-content;
+	}
+}
+
+.container {
+  width: 1170px !important;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 1170px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px !important;
+  }
+}
+
+.form {
+  &-control {
+    height: 40px;
+    border-radius: $border-radius;
+    width: 100%;
+    &-static {
+      padding: 0;
+    }
+  }
+  &-inline {
+    margin-bottom: $spacing-normal;
+    > *:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &-group {
+    label {
+      color: $text-dark;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$class-name} {
+  &-title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 45px;
+  }
+
+  &-button {
+    border-radius: 50px;
+    border: solid 1px $border-color;
+    text-transform: uppercase;
+    height: 40px;
+    padding: 5px 20px;
+    min-width: 160px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    &-primary {
+      background: $primary-color;
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+    &-white {
+      border-color: $primary-color;
+      background: $text-color;
+      color: $text-dark;
+      &:hover {
+        background: $primary-color;
+      }
+    }
+  }
+
+  /**********************************************
+   * Typography
+   */
+  &-text {
+    &-big {
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+
+  /**********************************************
+   * Flexbox
+   */
+  &-flex {
+    display: flex;
+  }
+  &-justify {
+    &-between {
+      justify-content: space-between;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-left {
+      justify-content: flex-start;
+    }
+  }
+  &-align {
+    &-baseline {
+      align-items: baseline;
+    }
+  }
+
+  /**********************************************
+   * Sizing
+   */
+  &-w {
+    &-100 {
+      width: 100% !important;
+    }
+    &-50 {
+      width: 50% !important;
+    }
+    &-25 {
+      width: 25% !important;
+    }
+  }
+
+  /**********************************************
+   * Spacing
+   */
+  &-m-0 {
+    margin: 0 !important;
+  }
+  &-mt-0 {
+    margin-top: 0 !important;
+  }
+  &-mb-0 {
+    margin-bottom: 0 !important;
+  }
+  &-ml-0 {
+    margin-left: 0 !important;
+  }
+  &-mr-0 {
+    margin-right: 0 !important;
+  }
+  &-my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &-mx-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  &-mr-xs {
+    margin-right: $spacing-extra-small !important;
+  }
+  &-mr-s {
+    margin-right: $spacing-small !important;
+  }
+  &-mr-n {
+    margin-right: $spacing-normal !important;
+  }
+  &-mr-m {
+    margin-right: $spacing-medium !important;
+  }
+  &-mb-s {
+    margin-bottom: $spacing-small !important;
+  }
+  &-mb-n {
+    margin-bottom: $spacing-normal !important;
+  }
+  &-mb-m {
+    margin-bottom: $spacing-medium !important;
+  }
+  &-my-l {
+    margin-top: $spacing-large !important;
+    margin-bottom: $spacing-large !important;
+  }
+  &-mt-l {
+    margin-top: $spacing-large !important;
+  }
+  &-py-n {
+    padding-top: $spacing-normal !important;
+    padding-bottom: $spacing-normal !important;
+  }
+  &-px-xs {
+    padding-left: $spacing-extra-small !important;
+    padding-right: $spacing-extra-small !important;
+  }
+
+  /**********************************************
+   * Table
+   */
+  &-table {
+    font-weight: bold;
+    &-row {
+      margin-bottom: 10px;
+    }
+  }
+
+  /**********************************************
+   * Card
+   */
+  &-card {
+    background: $text-color;
+    padding: $spacing-medium;
+    border-radius: $border-radius-large;
+    position: relative;
+    z-index: 0;
+    padding: $spacing-medium;
+    color: $text-dark;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      border-radius: $border-radius-large;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: rgba($text-color, 0.3);
+    }
+    &::before {
+      z-index: -1;
+      width: calc(100% - 20px * 2);
+      bottom: 15px;
+    }
+    &::after {
+      z-index: -2;
+      width: calc(100% - 40px * 2);
+      bottom: 30px;
+    }
+    &-title {
+      line-height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  /**********************************************
+   * Form
+   */
+  &-form {
+    &-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    &-control {
+      background-color: transparent;
+      border: none;
+      border-bottom: solid 1px $border-color-dark;
+      height: $height-control;
+      appearance: none;
+      border-radius: 0;
+      outline: none;
+      box-shadow: none;
+      &-static {
+        height: $height-control;
+        margin-bottom: 0;
+        line-height: $height-control;
+      }
+    }
+  }
+  &-label {
+    font-weight: 500;
+  }
+
+  /**********************************************
+   * Utility
+   */
+  &-devider {
+    border-top: solid $border-color 1px;
+    display: block;
+    margin: $spacing-small 0;
+  }
+
+  &-booking {
+    margin-top: -64px;
+  }
+}
+
+select {
+  background: url('../images/ic_carret_down_gray.svg') no-repeat;
+  background-size: 12px auto;
+  background-position: right 8px center;
+}
