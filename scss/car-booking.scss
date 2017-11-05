@@ -24,9 +24,13 @@ body {
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $primary-color center;
-  background-size: cover;
+  background: $primary-color center no-repeat;
   background-image: url('../images/bg_car_booking-min.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
