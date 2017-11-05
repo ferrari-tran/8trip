@@ -7,7 +7,7 @@ $border-color-dark:     #95989A;
 $class-name:            'et';
 $primary-color:         #00BAFB;
 $secondary-color:       #FFCD03;
-$border-radius:         3px;
+$border-radius:         5px;
 $border-radius-large:   10px;
 $spacing-large:         50px;
 $spacing-medium:        30px;
@@ -73,7 +73,7 @@ $height-control:        40px;
   }
 
   &-button {
-    border-radius: 50px;
+    border-radius: $border-radius;
     border: solid 1px $border-color;
     text-transform: uppercase;
     height: 40px;
