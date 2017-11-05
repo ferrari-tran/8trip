@@ -1,7 +1,7 @@
 @import                 'mixin';
 
 $text-color:            #fff;
-$text-dark:             #212121;
+$text-dark:             #222;
 $border-color:          #fff;
 $border-color-dark:     #95989A;
 $class-name:            'et';
@@ -16,42 +16,28 @@ $spacing-small:         10px;
 $spacing-extra-small:   5px;
 $height-control:        40px;
 
-body {
-  line-height: 1.5;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: $text-color;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: $primary-color center no-repeat;
-  background-image: url('../images/bg_car_booking-min.jpg');
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .et-section-car-booking {
+//   line-height: 1.5;
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: 400;
+//   font-size: 14px;
+//   color: $text-dark;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   background: $primary-color center no-repeat;
+//   background-image: url('../images/bg_car_booking-min.jpg');
+//   background-size: cover;
+//   min-height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
-.wrapper {
+.wrapper-booking {
   padding: 50px 0;
 	@include breakpoint(959, max) {
 		width: fit-content;
 	}
-}
-
-.container {
-  width: 1170px !important;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 1170px !important;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px !important;
-  }
 }
 
 .form {
@@ -98,6 +84,7 @@ body {
     outline: none;
     &-primary {
       background: $primary-color;
+      color: $text-color;
       &:hover {
         background: $secondary-color;
       }
@@ -227,7 +214,7 @@ body {
   /**********************************************
    * Table
    */
-  &-table {
+  &-bill {
     font-weight: bold;
     &-row {
       margin-bottom: 10px;
@@ -238,13 +225,13 @@ body {
    * Card
    */
   &-card {
-    background: $text-color;
+    background: $primary-color;
     padding: $spacing-medium;
     border-radius: $border-radius-large;
     position: relative;
     z-index: 0;
     padding: $spacing-medium;
-    color: $text-dark;
+    color: $text-color;
     &::before, &::after {
       content: '';
       position: absolute;
@@ -253,7 +240,7 @@ body {
       left: 0;
       right: 0;
       margin: 0 auto;
-      background: rgba($text-color, 0.3);
+      background: rgba($primary-color, 0.2);
     }
     &::before {
       z-index: -1;
@@ -284,7 +271,7 @@ body {
     &-control {
       background-color: transparent;
       border: none;
-      border-bottom: solid 1px $border-color-dark;
+      border-bottom: solid 1px $border-color;
       height: $height-control;
       appearance: none;
       border-radius: 0;
@@ -305,18 +292,21 @@ body {
    * Utility
    */
   &-devider {
-    border-top: solid $border-color 1px;
+    border-top: solid $border-color-dark 1px;
     display: block;
     margin: $spacing-small 0;
   }
 
   &-booking {
-    margin-top: -64px;
+    @include breakpoint(1199, min) {
+      margin-top: -64px;
+    }
+    // margin-top: -64px;
   }
 }
 
 select {
-  background: url('../images/ic_carret_down_gray.svg') no-repeat;
+  background: url('../images/ic_carret_down_white.svg') no-repeat;
   background-size: 12px auto;
   background-position: right 8px center;
 }
