@@ -81,3 +81,25 @@
 		}
 	}
 }
+
+.nav-pills {
+	> li {
+		> a {
+			color: $text-color;
+			&:hover {
+				background: $gray-light;
+			}
+		}
+	}
+	> li.active {
+		> a, >a:active, > a:visited:active, >a:focus {
+			background: $primary-color;
+		}
+
+		> a {
+			&:hover {
+				background: $primary-color;
+			}
+		}
+	}
+}

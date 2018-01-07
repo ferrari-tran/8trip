@@ -44,7 +44,7 @@
 		background: $white;
 		border-radius: $border-radius-big;
 		border-top-left-radius: 0;
-		@extend .et-shadow-100;
+		box-shadow: 0px 2px 30px rgba(0,0,0,0.1);
 	}
 }
 

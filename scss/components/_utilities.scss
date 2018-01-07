@@ -88,6 +88,9 @@ select {
 	padding-left: $normal-padding;
 	padding-right: $normal-padding;
 }
+.et-normal-padding-r {
+	padding-right: $normal-padding;
+}
 .et-normal-padding-y {
 	padding-top: $normal-padding;
 	padding-bottom: $normal-padding;
@@ -98,6 +101,9 @@ select {
 }
 .et-normal-margin-t {
 	margin-top: $normal-padding;
+}
+.et-normal-margin-r {
+	margin-right: $normal-padding;
 }
 .et-normal-margin-b {
 	margin-bottom: $normal-padding;
@@ -320,7 +326,24 @@ select {
 			padding-left: 10px;
 		}
 	}
+	.media {
+		.media-left {
+			padding-right: 15px;
+		}
+		.media-heading {
+			font-weight: $font-weight-bold;
+			font-size: 16px;
+			margin-bottom: 1rem;
+		}
+	}
 }
+.nav {
+	.et-nav-symbol {
+		vertical-align: middle;
+		margin-right: 1rem;
+	}
+}
+
 
 /**
  * Popover
