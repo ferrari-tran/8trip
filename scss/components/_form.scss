@@ -37,7 +37,9 @@
 	.form-control {
 		box-shadow: none;
 		border-color: $border-color;
-		height: 40px;
+		&:not(textarea) {
+			height: 40px;
+		}
 		padding: 10px 16px;
 		border-radius: $border-radius-normal;
 		@extend .transition;

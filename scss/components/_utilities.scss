@@ -102,11 +102,14 @@ select {
 .et-normal-margin-t {
 	margin-top: $normal-padding;
 }
-.et-normal-margin-r {
+.label {
 	margin-right: $normal-padding;
 }
 .et-normal-margin-b {
 	margin-bottom: $normal-padding;
+}
+.et-normal-margin-r {
+	margin-right: $normal-padding;
 }
 .et-small-margin-y {
 	margin-top: $small-spacing-item;
@@ -118,6 +121,9 @@ select {
 .et-small-margin-b {
 	margin-bottom: $small-spacing-item;
 }
+.et-small-margin-r {
+	margin-right: $small-spacing-item;
+}
 .et-small-padding-r {
 	padding-right: $small-spacing-item;
 }
@@ -127,6 +133,12 @@ select {
 .mx-auto {
 	margin-left: auto !important;
 	margin-right: auto !important;
+}
+.mt-0 {
+	margin-top: 0 !important;
+}
+.mb-0 {
+	margin-bottom: 0 !important;
 }
 .my-0 {
 	margin-top: 0 !important;
@@ -157,6 +169,9 @@ select {
 /**
  * Typography
  */
+.et-text-body {
+	color: $text-color;
+}
 .et-text-highlight {
 	color: $primary-color;
 }
@@ -243,6 +258,10 @@ select {
 	&.light {
 		color: $white;
 	}
+}
+.et-text-big {
+	font-size: 20px;
+	font-weight: 300;
 }
 .et-title-style-1 {
 	font-size: 14px;

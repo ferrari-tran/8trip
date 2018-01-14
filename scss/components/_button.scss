@@ -69,6 +69,17 @@
 		color: $white;
 	}
 }
+.btn-white {
+	background: $white;
+	border: none;
+	color: inherit;
+	&:hover {
+		background: $gray;
+	}
+	&:active {
+		background: rgba($gray, 0.3);
+	}
+}
 
 // Symbol
 .et-account-symbol {
